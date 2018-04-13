@@ -20,7 +20,7 @@ class Module implements ModuleDefinitionInterface
 
         $loader->registerNamespaces([
             'Shenxianshop\Modules\Little\Controllers' => __DIR__ . '/controllers/',
-            'Shenxianshop\Modules\Little\Models' => __DIR__ . '/models/',
+            'Shenxianshop\Modules\Little\Models'      => __DIR__ . '/models/',
         ]);
 
         $loader->register();

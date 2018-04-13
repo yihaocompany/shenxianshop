@@ -1,12 +1,10 @@
 <?php
 namespace Shenxianshop\Modules\Back;
-
 use Phalcon\DiInterface;
 use Phalcon\Loader;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Php as PhpEngine;
 use Phalcon\Mvc\ModuleDefinitionInterface;
-
 class Module implements ModuleDefinitionInterface
 {
     /**
@@ -17,15 +15,13 @@ class Module implements ModuleDefinitionInterface
     public function registerAutoloaders(DiInterface $di = null)
     {
         $loader = new Loader();
-
         $loader->registerNamespaces([
             'Shenxianshop\Modules\Back\Controllers' => __DIR__ . '/controllers/',
-            'Shenxianshop\Modules\Back\Models' => __DIR__ . '/models/',
+            'Shenxianshop\Modules\Back\Models'      => APP_PATH . '/common/models/',
+            'Shenxianshop\BasePc'                     => APP_PATH . '/common/libray/',
         ]);
-
         $loader->register();
     }
-
     /**
      * Registers services related to the module
      *
@@ -45,7 +41,6 @@ class Module implements ModuleDefinitionInterface
                 '.volt'  => 'voltShared',
                 '.phtml' => PhpEngine::class
             ]);
-
             return $view;
         });
     }

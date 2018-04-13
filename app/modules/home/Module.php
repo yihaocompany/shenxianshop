@@ -20,8 +20,10 @@ class Module implements ModuleDefinitionInterface
 
         $loader->registerNamespaces([
             'Shenxianshop\Modules\Home\Controllers' => __DIR__ . '/controllers/',
-            'Shenxianshop\Modules\Home\Models' => __DIR__ . '/models/',
+            'Shenxianshop\Modules\Home\Models'      => APP_PATH . '/common/models/',
+            'Shenxianshop\BasePc'                     => APP_PATH . '/common/libray/',
         ]);
+
 
         $loader->register();
     }

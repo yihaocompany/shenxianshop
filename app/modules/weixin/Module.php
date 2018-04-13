@@ -14,15 +14,12 @@ class Module implements ModuleDefinitionInterface
      *
      * @param DiInterface $di
      */
-    public function registerAutoloaders(DiInterface $di = null)
-    {
+    public function registerAutoloaders(DiInterface $di = null){
         $loader = new Loader();
-
         $loader->registerNamespaces([
             'Shenxianshop\Modules\Weixin\Controllers' => __DIR__ . '/controllers/',
-            'Shenxianshop\Modules\Weixin\Models' => __DIR__ . '/models/',
+            'Shenxianshop\Modules\Weixin\Models'      => __DIR__ . '/models/',
         ]);
-
         $loader->register();
     }
 

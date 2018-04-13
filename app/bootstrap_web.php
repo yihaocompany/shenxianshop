@@ -45,10 +45,10 @@ try {
      * Register application modules
      */
     $application->registerModules([
-        'home' => ['className'   => 'Shenxianshop\Modules\Home\Module'],
-        'back' => ['className'   => 'Shenxianshop\Modules\Back\Module'],
-        'weixin' => ['className' => 'Shenxianshop\Modules\Weixin\Module'],
-        'api' => ['className'    => 'Shenxianshop\Modules\Api\Module'],
+        'home'   => ['className'    => 'Shenxianshop\Modules\Home\Module'],
+        'back'   => ['className'    => 'Shenxianshop\Modules\Back\Module'],
+        'weixin' => ['className'    => 'Shenxianshop\Modules\Weixin\Module'],
+        'api'    => ['className'    => 'Shenxianshop\Modules\Api\Module'],
         'little' => ['className'    => 'Shenxianshop\Modules\Little\Module']
     ]);
 

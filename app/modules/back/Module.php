@@ -17,8 +17,9 @@ class Module implements ModuleDefinitionInterface
         $loader = new Loader();
         $loader->registerNamespaces([
             'Shenxianshop\Modules\Back\Controllers' => __DIR__ . '/controllers/',
-            'Shenxianshop\Modules\Back\Models'      => APP_PATH . '/common/models/',
-            'Shenxianshop\BasePc'                     => APP_PATH . '/common/libray/',
+            'Shenxianshop\Models'                   => APP_PATH . '/common/models/',
+            'Shenxianshop\BasePc'                   => APP_PATH . '/common/libray/',
+            'Shenxianshop\Forms'                    => APP_PATH . '/common/forms/',
         ]);
         $loader->register();
     }

@@ -15,4 +15,13 @@ $messages = [
     'lang_email'       => 'tbz@qq.com',
     'lang_copyright'   => '宁波易好电子商务',
     'lang_logo'        => 'logo.jpg',
+    'lang_logintitle'  => '登录页',
+    'lang_manager'     =>'管理中心',
+    'lang_user'        =>'用户名',
+    'lang_password'    =>'密码',
+    'lang_verify'      =>'验证码',
+    'lang_submit'      =>'登陆',
+    'lang_saveinfo'    =>'保存信息',
+    'lang_forgetpassword'=>'忘记密码？',
+
 ];

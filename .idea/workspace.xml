@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68a603a6-32ba-4e9a-aac7-03c134b3340d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/messages/en.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/messages/en.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/admin/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/views/admin/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/admin/login.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/views/admin/login.phtml" afterDir="false" />
-    </list>
+    <list default="true" id="68a603a6-32ba-4e9a-aac7-03c134b3340d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -418,16 +411,15 @@
       <workItem from="1523619195069" duration="13303000" />
       <workItem from="1523637753974" duration="9749000" />
       <workItem from="1523670273101" duration="3116000" />
-      <workItem from="1523704121573" duration="1548000" />
+      <workItem from="1523704121573" duration="2145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27716000" />
+    <option name="totallyTimeSpent" value="28313000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1296875" />
       <window_info anchor="bottom" id="TODO" order="6" />

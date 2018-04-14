@@ -7,15 +7,20 @@
  */
 // app/messages/en.php
 $messages = [
-    'lang_app'         =>'ShenXian ESHOP',
-    'lang_address'     => 'Ningbo city Dazhujia Number 8888',
+    'lang_app'         =>'神仙ESHOP',
+    'lang_title'       =>'神仙ESHOP',
+    'lang_keywords'    =>'神仙ESHOP,H5商城,微信商城,小程序商城',
+    'lang_description' =>'神仙ESHOP,H5商城,微信商城,小程序商城 QQ:574574 Phone:17705812500 Company:宁波易好电子商务',
+    'lang_address'     => '宁波大朱家新村8888号',
     'lang_email'       => 'tbz@qq.com',
-    'lang_copyright'   => 'Yihao Eshop Company',
+    'lang_copyright'   => '宁波易好电子商务',
     'lang_logo'        => 'logo.jpg',
-    'lang_logintitle'  => 'Login',
-    'lang_manager'     =>'Manager center',
+    'lang_logintitle'  => '登录页',
+    'lang_manager'     =>'管理中心',
     'lang_user'        =>'用户名',
-    'lang_password'        =>'密码',
-    'lang_verify'        =>'验证码',
-    'lang_submit'        =>'登陆',
+    'lang_password'    =>'密码',
+    'lang_verify'      =>'验证码',
+    'lang_submit'      =>'登陆',
+    'lang_saveinfo'    =>'保存信息',
+    'lang_forgetpassword'=>'忘记密码？',
 ];

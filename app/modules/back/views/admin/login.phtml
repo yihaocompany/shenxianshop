@@ -32,12 +32,9 @@
         }
         detectBrowser();
     </script>
-
     <script type="text/javascript">
-
         if(!$.cookie('tpshopActionParam') && $.cookie('admin_type') != 1){
             $.cookie('admin_type','1' , {expires: 1 ,path:'/'});
-            //top.location.href = location.href;
         }
     </script>
 </head>
@@ -150,7 +147,7 @@
             if(vertify && $('#theForm input[name=username]').val() != '' && $('#theForm input[name=password]').val() != ''){
                 $.ajax({
                     async:false,
-                    url:'/index.php?m=Admin&c=Admin&a=login&t='+Math.random(),
+                    url:'/back/admin/login/t='+Math.random(),
                     data:{'username':$('#theForm input[name=username]').val(),'password':$('#theForm input[name=password]').val(),vertify:$('#theForm input[name=vertify]').val()},
                     type:'post',
                     dataType:'json',

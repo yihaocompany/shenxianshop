@@ -50,6 +50,28 @@ $di->setShared('redis', function () {
     return $redis;
 });
 
+// Simple database connection to localhost
+$di->set(
+    'localmongo',
+    function () {
+        $mongo = new MongoClient();
+        return $mongo->selectDB('shenxianshop');
+    },
+    true
+);
+
+// Connecting to a domain socket, falling back to localhost connection
+$di->set(
+    'mongo',
+    function () {
+        $mongo = new MongoClient(
+            'mongodb:///tmp/mongodb-27017.sock,localhost:27017'
+        );
+        return $mongo->selectDB('shenxianshop');
+    },
+    true
+);
+
 
 
 /**

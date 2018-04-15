@@ -14,6 +14,7 @@ $messages = [
     'lang_address'     => '宁波大朱家新村8888号',
     'lang_email'       => 'tbz@qq.com',
     'lang_copyright'   => '宁波易好电子商务',
+    'lang_author'      =>'王海滨',
     'lang_logo'        => 'logo.jpg',
     'lang_logintitle'  => '登录页',
     'lang_manager'     =>'管理中心',

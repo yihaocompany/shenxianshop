@@ -192,7 +192,7 @@ class SearchWord extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("search_word");
     }
 

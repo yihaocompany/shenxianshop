@@ -160,7 +160,7 @@ class DistributGoods extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("distribut_goods");
     }
 

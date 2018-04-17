@@ -162,7 +162,7 @@ class UserMessage extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("user_message");
     }
 

@@ -1182,7 +1182,7 @@ class Goods extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("goods");
     }
 

@@ -220,7 +220,7 @@ class SpecGoodsPrice extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("spec_goods_price");
     }
 

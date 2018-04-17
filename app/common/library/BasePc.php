@@ -11,6 +11,7 @@ use Phalcon\Translate\Adapter\NativeArray;
 use Phalcon\Mvc\Controller;
 class BasePc extends Controller{
     public $zh_CN='zh-CN';
+    public $category;
     public function initialize(){
         // 询问浏览器语言
         $language = $this->request->getBestLanguage();
@@ -21,11 +22,8 @@ class BasePc extends Controller{
             require APP_PATH.'/common/messages/' .  $this->zh_CN . '.php';
         }
         $this->view->setVar('_language',$messages);
-
         //分类
-
-
-
-
+        $this->category=\Shenxianshop\Models\GoodsCategory::get_goods_category();
+        $this->view->setVar('category', $this->category);
     }
 }

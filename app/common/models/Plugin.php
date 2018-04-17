@@ -370,7 +370,7 @@ class Plugin extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("plugin");
     }
 

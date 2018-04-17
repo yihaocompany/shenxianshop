@@ -13,14 +13,12 @@ class DeliveryDoc extends \Phalcon\Mvc\Model
      * @Column(column="id", type="integer", length=11, nullable=false)
      */
     protected $id;
-
     /**
      *
      * @var integer
      * @Column(column="order_id", type="integer", length=11, nullable=false)
      */
     protected $order_id;
-
     /**
      *
      * @var string
@@ -672,7 +670,7 @@ class DeliveryDoc extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("delivery_doc");
     }
 

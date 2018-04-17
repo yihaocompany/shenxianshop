@@ -190,43 +190,50 @@
         <div class="w1224 p">
             <div class="categorys home_categorys">
                 <div class="dt">
-                    <a href="{:U('Home/Goods/all_category')}" target="_blank"><i class="share-a_a2"></i>全部商品分类</a>
+                    <a href="/Home/Goods/all_category/" target="_blank"><i class="share-a_a2"></i>全部商品分类</a>
                 </div>
                 <!--全部商品分类-s-->
                 <div class="dd">
                     <div class="cata-nav">
                         <!-- 外层循环点-->
-                        <foreach name="goods_category_tree" key="k" item='v'>
+                        <?php
+                            foreach ($category as $v){
+                        ?>
                             <div class="item fore1">
-                                <if condition="$v[level] eq 1">
+                                <?php
+                                    if($v['level']=='1'){
+                                ?>
                                     <div class="item-left">
                                         <div class="cata-nav-name">
                                             <h3>
                                                 <div class="contiw-cer"><span class="share-icon-phone"></span></div>
-                                                <a href="{:U('Home/Goods/goodsList',array('id'=>$v[id]))}" title="{$v[name]}">{$v[name]}</a>
+                                                <a href="/Home/Goods/goodsLis/<?php echo $v['id'] ?>" title="<?php echo $v['name']?>"><?php echo $v['name']?></a>
                                             </h3>
                                         </div>
                                         <b>&gt;</b>
                                     </div>
-                                </if>
+                                <?php } ?>
                                 <div class="cata-nav-layer">
                                     <div class="cata-nav-left">
                                         <div class="subitems">
-                                            <foreach name="v['tmenu']" key="k2" item='v2'>
-                                                <if condition="$v2[parent_id] eq $v['id']">
+                                            <?php foreach ($v['tmenu'] as $v2){?>
+                                                 <?php if($v2['parent_id']== $v['id']){ ?>
                                                     <dl><!-- 2级循环点-->
                                                         <dt>
-                                                            <a href="{:U('Home/Goods/goodsList',array('id'=>$v2[id]))}" target="_blank">{$v2[name]}<i>&gt;</i></a>
+                                                            <a href="/Home/Goods/goodsList/<?php echo $v2['id']?>" target="_blank"><?php echo $v2['name']?><i>&gt;</i></a>
                                                         </dt>
                                                         <dd>
-                                                            <foreach name="v2['sub_menu']" key="k3" item='v3'>
-                                                                <if condition="$v3[parent_id] eq $v2['id']">
-                                                                    <a href="{:U('Home/Goods/goodsList',array('id'=>$v3[id]))}" target="_blank">{$v3[name]}</a></if>
-                                                            </foreach>
+                                                            <?php foreach ($v2['sub_menu'] as $v3){ ?>
+                                                              <?php if($v3['parent_id']== $v2['id']){ ?>
+                                                                    <a href="/Home/Goods/goodsList/<?php echo  $v3['id']?>" target="_blank"><?php echo  $v3['name']?></a>
+                                                                <?php } ?>
+                                                            <?php } ?>
                                                         </dd>
                                                     </dl>
-                                                </if>
-                                            </foreach>
+                                                <?php } ?>
+                                            <?php }?>
+
+
                                             <!--商品分类底部广告-s-->
                                             <div class="advertisement_down">
                                                 <ul>
@@ -253,7 +260,9 @@
                                     <!--商品分类右侧广告-e-->
                                 </div>
                             </div>
-                        </foreach>
+
+
+                        <?php } ?>
                     </div>
                 </div>
                 <!--全部商品分类-e-->

@@ -342,7 +342,7 @@ class PromGoods extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("prom_goods");
     }
 

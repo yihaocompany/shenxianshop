@@ -282,7 +282,7 @@ class PickUp extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("pick_up");
     }
 

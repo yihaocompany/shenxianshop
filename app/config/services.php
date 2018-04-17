@@ -50,7 +50,7 @@ $di->setShared('db', function () use ($di){
 $di->setShared('modelsMetadata', function () {
     return new MetaDataAdapter();
 });
-$di->setShared('redis', function () {
+$di->setShared('phalcon_redis', function () {
     $redis = new  \Phalcon\Mvc\Model\MetaData\Redis([
         'prefix' => '',
         'lifetime' => 86400,
@@ -60,6 +60,15 @@ $di->setShared('redis', function () {
     ]);
     return $redis;
 });
+
+
+$di->setShared('redis', function () {
+    $redis = new Redis();
+    $redis->connect('127.0.0.1',6379);
+    return $redis;
+});
+
+
 $di->set('profiler', function(){
     return
         new  \Phalcon\Db\Profiler();

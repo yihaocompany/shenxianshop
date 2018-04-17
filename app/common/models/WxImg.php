@@ -342,7 +342,7 @@ class WxImg extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("wx_img");
     }
 

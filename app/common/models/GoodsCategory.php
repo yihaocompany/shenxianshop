@@ -1,7 +1,5 @@
 <?php
-
 namespace Shenxianshop\Models;
-
 class GoodsCategory extends \Phalcon\Mvc\Model
 {
 
@@ -13,21 +11,18 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      * @Column(column="id", type="integer", length=5, nullable=false)
      */
     protected $id;
-
     /**
      *
      * @var string
      * @Column(column="name", type="string", length=90, nullable=false)
      */
     protected $name;
-
     /**
      *
      * @var string
      * @Column(column="mobile_name", type="string", length=64, nullable=true)
      */
     protected $mobile_name;
-
     /**
      *
      * @var integer
@@ -41,56 +36,48 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      * @Column(column="parent_id_path", type="string", length=128, nullable=true)
      */
     protected $parent_id_path;
-
     /**
      *
      * @var integer
      * @Column(column="level", type="integer", length=1, nullable=true)
      */
     protected $level;
-
     /**
      *
      * @var integer
      * @Column(column="sort_order", type="integer", length=1, nullable=false)
      */
     protected $sort_order;
-
     /**
      *
      * @var integer
      * @Column(column="is_show", type="integer", length=1, nullable=false)
      */
     protected $is_show;
-
     /**
      *
      * @var string
      * @Column(column="image", type="string", length=512, nullable=true)
      */
     protected $image;
-
     /**
      *
      * @var integer
      * @Column(column="is_hot", type="integer", length=1, nullable=true)
      */
     protected $is_hot;
-
     /**
      *
      * @var integer
      * @Column(column="cat_group", type="integer", length=1, nullable=true)
      */
     protected $cat_group;
-
     /**
      *
      * @var integer
      * @Column(column="commission_rate", type="integer", length=1, nullable=true)
      */
     protected $commission_rate;
-
     /**
      * Method to set the value of field id
      *
@@ -100,7 +87,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setId($id)
     {
         $this->id = $id;
-
         return $this;
     }
 
@@ -113,7 +99,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setName($name)
     {
         $this->name = $name;
-
         return $this;
     }
 
@@ -126,7 +111,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setMobileName($mobile_name)
     {
         $this->mobile_name = $mobile_name;
-
         return $this;
     }
 
@@ -139,7 +123,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setParentId($parent_id)
     {
         $this->parent_id = $parent_id;
-
         return $this;
     }
 
@@ -152,7 +135,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setParentIdPath($parent_id_path)
     {
         $this->parent_id_path = $parent_id_path;
-
         return $this;
     }
 
@@ -165,7 +147,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setLevel($level)
     {
         $this->level = $level;
-
         return $this;
     }
 
@@ -178,7 +159,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setSortOrder($sort_order)
     {
         $this->sort_order = $sort_order;
-
         return $this;
     }
 
@@ -191,7 +171,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setIsShow($is_show)
     {
         $this->is_show = $is_show;
-
         return $this;
     }
 
@@ -204,7 +183,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setImage($image)
     {
         $this->image = $image;
-
         return $this;
     }
 
@@ -217,7 +195,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setIsHot($is_hot)
     {
         $this->is_hot = $is_hot;
-
         return $this;
     }
 
@@ -230,7 +207,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setCatGroup($cat_group)
     {
         $this->cat_group = $cat_group;
-
         return $this;
     }
 
@@ -243,7 +219,6 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     public function setCommissionRate($commission_rate)
     {
         $this->commission_rate = $commission_rate;
-
         return $this;
     }
 
@@ -312,8 +287,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      * @return integer
      */
-    public function getSortOrder()
-    {
+    public function getSortOrder(){
         return $this->sort_order;
     }
 
@@ -322,8 +296,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      * @return integer
      */
-    public function getIsShow()
-    {
+    public function getIsShow(){
         return $this->is_show;
     }
 
@@ -332,8 +305,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      * @return string
      */
-    public function getImage()
-    {
+    public function getImage(){
         return $this->image;
     }
 
@@ -342,8 +314,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      * @return integer
      */
-    public function getIsHot()
-    {
+    public function getIsHot(){
         return $this->is_hot;
     }
 
@@ -352,8 +323,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      * @return integer
      */
-    public function getCatGroup()
-    {
+    public function getCatGroup(){
         return $this->cat_group;
     }
 
@@ -362,8 +332,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      * @return integer
      */
-    public function getCommissionRate()
-    {
+    public function getCommissionRate(){
         return $this->commission_rate;
     }
 
@@ -371,7 +340,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      * Initialize method for model.
      */
     public function initialize(){
-        $this->setSchema("ming.biz");
+
         $this->setSource("goods_category");
     }
 
@@ -380,8 +349,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      * @return string
      */
-    public function getSource()
-    {
+    public function getSource(){
         return 'goods_category';
     }
 
@@ -391,8 +359,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      * @param mixed $parameters
      * @return GoodsCategory[]|GoodsCategory|\Phalcon\Mvc\Model\ResultSetInterface
      */
-    public static function find($parameters = null)
-    {
+    public static function find($parameters = null){
         return parent::find($parameters);
     }
 
@@ -402,8 +369,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      * @param mixed $parameters
      * @return GoodsCategory|\Phalcon\Mvc\Model\ResultInterface
      */
-    public static function findFirst($parameters = null)
-    {
+    public static function findFirst($parameters = null){
         return parent::findFirst($parameters);
     }
     /**
@@ -412,13 +378,13 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      */
 
-    public static function get_goods_category($redis=null)
-    {
-            if($redis){
+    public static function get_goods_category(){
+          $redis = \Phalcon\Di::getDefault()->getShared('redis');
+             if($redis){
                 if(!$redis->get('goodscategory')){
-                    $redis->set('goodscategory',parent::find()->toArray());
+                    $redis->set('goodscategory',serialize(parent::find()->toArray()));
                 }
-                return $redis->get('goodscategory');
+                return unserialize($redis->get('goodscategory'));
             }else{
                 return parent::find()->toArray();
             }
@@ -429,8 +395,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      * @return array
      */
-    public function columnMap()
-    {
+    public function columnMap(){
         return [
             'id' => 'id',
             'name' => 'name',
@@ -446,5 +411,4 @@ class GoodsCategory extends \Phalcon\Mvc\Model
             'commission_rate' => 'commission_rate'
         ];
     }
-
 }

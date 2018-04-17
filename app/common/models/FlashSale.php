@@ -402,7 +402,7 @@ class FlashSale extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("flash_sale");
     }
 

@@ -522,7 +522,7 @@ class GroupBuy extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("ming.biz");
+
         $this->setSource("group_buy");
     }
 

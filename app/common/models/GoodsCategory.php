@@ -370,8 +370,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     /**
      * Initialize method for model.
      */
-    public function initialize()
-    {
+    public function initialize(){
         $this->setSchema("ming.biz");
         $this->setSource("goods_category");
     }
@@ -407,7 +406,23 @@ class GoodsCategory extends \Phalcon\Mvc\Model
     {
         return parent::findFirst($parameters);
     }
+    /**
+     * 商品分类
+     * 加上REDIS支持
+     *
+     */
 
+    public static function get_goods_category($redis=null)
+    {
+            if($redis){
+                if(!$redis->get('goodscategory')){
+                    $redis->set('goodscategory',parent::find()->toArray());
+                }
+                return $redis->get('goodscategory');
+            }else{
+                return parent::find()->toArray();
+            }
+    }
     /**
      * Independent Column Mapping.
      * Keys are the real names in the table and the values their names in the application

@@ -1,4 +1,4 @@
-# 名店开源商城 -Shenxianshop  ming.biz 
+# 名店开源商城 -Mingshop  ming.biz 
 名店开源商城  phalcon &amp; php7.2
 开发工具及环境：php7.2 phalcon3.3 swoole redis rabbitmq msgpack mysql  mongodb nginx
 

@@ -21,5 +21,11 @@ class BasePc extends Controller{
             require APP_PATH.'/common/messages/' .  $this->zh_CN . '.php';
         }
         $this->view->setVar('_language',$messages);
+
+        //分类
+
+
+
+
     }
 }

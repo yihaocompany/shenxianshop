@@ -57,7 +57,7 @@
                     <div class="formText">
                         <i class="icon icon-chick"></i>
                         <input type="text" name="vertify" autocomplete="off" class="input-text chick_ue" value="" placeholder="<?php echo $_language['lang_verify']?>" />
-                        <img src="/back/admin/validatecode" class="chicuele" id="imgVerify" alt="" onclick="fleshVerify()">
+                        <img src="/back/admin/validatecode" class="chicuele" id="imgVerify" alt="code" onclick="fleshVerify()">
                     </div>
                     <div class="formText">
                         <div class="checkbox">
@@ -179,7 +179,6 @@
     });
 
     function fleshVerify(){
-
         $('#imgVerify').attr('src','/back/admin/validatecode/vertify/r/'+Math.floor(Math.random()*100));//重载验证码
     }
 </script>

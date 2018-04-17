@@ -4,6 +4,8 @@
 
 ## 运行环境
 centos7 64位 nginx redis rabbitmq mysql 
+### nginx的配置 
+    
 
 ##说明
 modules中的install中保存有SQL文件
@@ -21,7 +23,7 @@ app/common/models 为模型类 即相关表的实体类 ，其中有一个Valida
 
 ##GIT工具的命令
 ####1先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
- git init 
+git init 
 ####、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
 git add .
 ####2、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明

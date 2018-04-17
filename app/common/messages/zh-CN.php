@@ -24,5 +24,9 @@ $messages = [
     'lang_submit'      =>'登陆',
     'lang_saveinfo'    =>'保存信息',
     'lang_forgetpassword'=>'忘记密码？',
+    'lang_copright_botton'=>'版权所有 保留一切权利',
+    'lang_record_no' =>'备案号:{xxxxxxxx}号',
+    'lang_home' =>'首页',
+    'lang_shop_info_store_title'=>'shop title'
 
 ];

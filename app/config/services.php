@@ -64,9 +64,30 @@ $di->setShared('phalcon_redis', function () {
 
 $di->setShared('redis', function () {
     $redis = new Redis();
-    $redis->connect('127.0.0.1',6379);
+    $redis->connect('localhost',6379);
     return $redis;
 });
+
+
+
+$di->setShared('cache', function () {
+    $frontCache = new Phalcon\Cache\Frontend\Data(
+        [
+            "lifetime" => 172800,
+        ]
+    );
+    $cache=new Phalcon\Cache\Backend\Redis(
+        $frontCache,
+        [
+            "host"       => "localhost",
+            "port"       => 6379,
+            "persistent" => false,
+            "index"      => 0,
+        ]
+    );
+    return $cache;
+});
+
 
 
 $di->set('profiler', function(){

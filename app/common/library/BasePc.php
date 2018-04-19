@@ -23,7 +23,8 @@ class BasePc extends Controller{
         }
         $this->view->setVar('_language',$messages);
         //分类
-        $this->category=\Shenxianshop\Models\GoodsCategory::get_goods_category();
+        $category=new \Shenxianshop\Models\GoodsCategory();
+        $this->category=$category->get_goods_category();
         $this->view->setVar('category', $this->category);
     }
 }

@@ -14,7 +14,6 @@ class AdminController extends ControllerBase
         $_vc->doimg();
         $this->session->set('back_code', $_vc->getCode());
         exit;
-
     }
 }
 

@@ -1,6 +1,6 @@
 <?php
 namespace Shenxianshop\Models;
-class GoodsCategory extends \Phalcon\Mvc\Model
+class GoodsCategory extends ModelBase
 {
 
     /**
@@ -340,7 +340,7 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      * Initialize method for model.
      */
     public function initialize(){
-
+        parent::initialize();
         $this->setSource("goods_category");
     }
 
@@ -378,8 +378,8 @@ class GoodsCategory extends \Phalcon\Mvc\Model
      *
      */
 
-    public static function get_goods_category(){
-          $redis = \Phalcon\Di::getDefault()->getShared('redis');
+    public  function get_goods_category(){
+             $redis =$this->_redis;
              if($redis){
                 if(!$redis->get('goodscategory')){
                     $redis->set('goodscategory',serialize(parent::find()->toArray()));

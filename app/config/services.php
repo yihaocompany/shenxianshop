@@ -51,12 +51,13 @@ $di->setShared('modelsMetadata', function () {
     return new MetaDataAdapter();
 });
 $di->setShared('phalcon_redis', function () {
+    $config = $this->getConfig();
     $redis = new  \Phalcon\Mvc\Model\MetaData\Redis([
-        'prefix' => '',
-        'lifetime' => 86400,
-        'host' => '127.0.0.1',
-        'port' => 6379,
-        'persistent' => false
+        'prefix'     =>  $config->redis->prefix,
+        'lifetime'   =>  $config->redis->lifetime,
+        'host'       =>  $config->redis->host,
+        'port'       =>  $config->redis->port,
+        'persistent' =>  $config->redis->persistent,
     ]);
     return $redis;
 });
@@ -114,6 +115,26 @@ $di->set(
     },
     true
 );
+
+
+$di->setShared('crypt', function () {
+    $crypt = new \Phalcon\Crypt();
+    // don't use PADDING_DEFAULT, Affect the cookie result
+    $crypt->setPadding(\Phalcon\Crypt::PADDING_ZERO);
+    $crypt->setKey('wanghaibin@17705812500'); // Use your own key!
+    return $crypt;
+});
+// http cookies
+$di->setShared('cookies', function () {
+    $cookies = new \Phalcon\Http\Response\Cookies();
+    $cookies->useEncryption(false);
+    return $cookies;
+});
+
+
+
+
+
 /**
  * Configure the Volt service for rendering .volt templates
  */

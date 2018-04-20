@@ -1,11 +1,9 @@
 <?php
 
 namespace Shenxianshop\Models;
-
 use Phalcon\Validation;
 use Phalcon\Validation\Validator\Email as EmailValidator;
-
-class Admin extends \Phalcon\Mvc\Model
+class Admin extends \Shenxianshop\Models\ModelBase
 {
 
     /**
@@ -438,7 +436,6 @@ class Admin extends \Phalcon\Mvc\Model
     public function validation()
     {
         $validator = new Validation();
-
         $validator->add(
             'email',
             new EmailValidator(
@@ -457,7 +454,7 @@ class Admin extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-
+        parent::initialize();
         $this->setSource("admin");
     }
 
@@ -499,8 +496,46 @@ class Admin extends \Phalcon\Mvc\Model
      *
      * @return array
      */
-    public function columnMap()
-    {
+
+
+    /**
+     * 获取用户数据
+     * @param string $username
+     * @param array $ext
+     * @return \Phalcon\Mvc\Model
+     * @throws \Exception
+     */
+    public function detail($parameters){
+       $user= parent::findFirst($parameters);
+        if (!$user) {
+            throw new \Exception('Wrong User Info');
+        }
+        return $user;
+    }
+
+
+    /**
+     * 登陆用户判定
+     * @param string $username
+     * @param array $ext
+     * @return \Phalcon\Mvc\Model
+     * @throws \Exception
+     */
+    public function UserCheck($parameters,$pass){
+        $user=$this->detail($parameters);
+        if($user){
+            if($user->getPassword()!=md5($pass)){
+                return false;
+            }else{
+                $this -> getDI() -> get('session') -> set('user',$user);
+                return true;
+            }
+        }else{
+            return false;
+        }
+
+    }
+    public function columnMap(){
         return [
             'admin_id' => 'admin_id',
             'user_name' => 'user_name',

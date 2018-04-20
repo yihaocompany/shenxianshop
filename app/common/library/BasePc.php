@@ -7,22 +7,12 @@
  * Brief: 前台后台基类
  */
 namespace Shenxianshop;
-use Phalcon\Translate\Adapter\NativeArray;
+use Phalcon\Mvc\View;
 use Phalcon\Mvc\Controller;
-class BasePc extends Controller{
-    public $zh_CN='zh-CN';
+class BasePc extends  \Shenxianshop\Base{
     public $category;
     public function initialize(){
-        // 询问浏览器语言
-        $language = $this->request->getBestLanguage();
-        $messages=array();
-        if (file_exists(APP_PATH.'/common/messages/' . $language . '.php')) {
-            require APP_PATH.'/common/messages/' . $language . '.php';
-        } else {
-            require APP_PATH.'/common/messages/' .  $this->zh_CN . '.php';
-        }
-        $this->view->setVar('_language',$messages);
-        //分类
+        parent::initialize();
         $category=new \Shenxianshop\Models\GoodsCategory();
         $this->category=$category->get_goods_category();
         $this->view->setVar('category', $this->category);

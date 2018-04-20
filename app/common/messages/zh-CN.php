@@ -23,10 +23,18 @@ $messages = [
     'lang_verify'      =>'验证码',
     'lang_submit'      =>'登陆',
     'lang_saveinfo'    =>'保存信息',
+    'lang_refresh'    =>'点击刷新',
     'lang_forgetpassword'=>'忘记密码？',
+    'lang_needusername'=>'请输入用户名',
+    'lang_needpassword'=>'请输入密码',
+    'lang_needcode'    =>'请输入验证码',
+    'lang_wrongdcode'    =>'请输入正确验证码',
+    'lang_login'    =>'登陆失败',
+    'lang_success'    =>'登陆成功',
     'lang_copright_botton'=>'版权所有 保留一切权利',
     'lang_record_no' =>'备案号:{xxxxxxxx}号',
     'lang_home' =>'首页',
-    'lang_shop_info_store_title'=>'shop title'
+    'lang_shop_info_store_title'=>'shop title',
+    'lang_net_fail'=>'网络失败，请刷新页面后重试!'
 
 ];

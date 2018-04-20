@@ -7,7 +7,6 @@ defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?: realpath(dirn
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 return new \Phalcon\Config([
     'version' => '1.0',
-
     'database' => [
         'adapter'  => 'Mysql',
         'host'     => 'localhost',
@@ -16,6 +15,28 @@ return new \Phalcon\Config([
         'dbname'   => 'shenxianshop',
         'charset'  => 'utf8',
     ],
+    //从库
+    'databaseslave'=>[
+
+        'adapter'  => 'Mysql',
+        'host'     => 'localhost',
+        'username' => 'root',
+        'password' => 'asd123',
+        'dbname'   => 'shenxianshop',
+        'charset'  => 'utf8',
+    ],
+
+    //redis
+    'redis'=>[
+        'prefix'     => '',
+        'lifetime'   => 86400,
+        'host'       => '127.0.0.1',
+        'port'       => 6379,
+        'persistent' => false,
+        "index"      => 0,
+     ],
+
+
 
     'application' => [
         'appDir'         => APP_PATH . '/',

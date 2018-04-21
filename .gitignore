@@ -1,0 +1,6 @@
+/cache/
+/config/development/
+/config/config.php
+/.phalcon/
+/.idea/
+

@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68a603a6-32ba-4e9a-aac7-03c134b3340d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/library/BasePc.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/library/BasePc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/models/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/models/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/models/GoodsCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/models/GoodsCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/models/ModelBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/models/ModelBase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/models/Navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/models/Navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/controllers/AdminLoginBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/controllers/AdminLoginBase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/controllers/ControllerBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/controllers/ControllerBase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/admin/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/views/admin/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/views/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/views/index/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/home/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/home/controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/home/views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/home/views/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/home/views/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/home/views/index/index.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,14 +71,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="384">
+              <first_editor relative-caret-position="487">
                 <caret line="103" selection-start-line="103" selection-end-line="103" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -114,15 +106,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
               <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zh-CN.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/messages/zh-CN.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="31" column="15" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -162,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.htrouter.php" />
         <option value="$PROJECT_DIR$/app/modules/home/controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/app/modules/home/views/admin/login.phtml" />
         <option value="$PROJECT_DIR$/app/modules/home/views/admin/index.phtml" />
@@ -213,6 +195,7 @@
         <option value="$PROJECT_DIR$/app/modules/back/controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/app/modules/back/views/index.phtml" />
         <option value="$PROJECT_DIR$/app/modules/back/views/admin/index.phtml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -233,9 +216,9 @@
       <path value="$PROJECT_DIR$/../phalcon-devtools/ide/phpstorm" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="185" />
-    <option name="y" value="380" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="778" />
+    <option name="y" value="145" />
     <option name="width" value="1161" />
     <option name="height" value="879" />
   </component>
@@ -274,19 +257,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public\static\font\font" />
-      <recent name="E:\phpsource\shenxianshop\public\static\font" />
-      <recent name="E:\phpsource\shenxianshop\public" />
-      <recent name="E:\phpsource\shenxianshop\app\modules\back\views" />
-      <recent name="E:\phpsource\shenxianshop\app\common" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public\images" />
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public" />
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public\back" />
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public\back\googleapis" />
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\tools\admin template free" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\vagrant\centos\phpprojects\shenxianshop" />
+      <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public\static\font\font" />
+      <recent name="E:\phpsource\shenxianshop\public\static\font" />
+      <recent name="E:\phpsource\shenxianshop\public" />
+      <recent name="E:\phpsource\shenxianshop\app\modules\back\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,17 +331,18 @@
       <workItem from="1524043995090" duration="321000" />
       <workItem from="1524127788398" duration="1391000" />
       <workItem from="1524131108893" duration="1234000" />
-      <workItem from="1524292377538" duration="2512000" />
+      <workItem from="1524292377538" duration="4016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127632000" />
+    <option name="totallyTimeSpent" value="129136000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.353125" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.353125" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -367,7 +351,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4893617" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5755319" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -391,13 +375,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/modules/back/views/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6424">
-          <caret line="292" column="64" selection-start-line="292" selection-start-column="64" selection-end-line="292" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/back/controllers/ControllerBase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -724,10 +701,17 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="384">
+          <first_editor relative-caret-position="487">
             <caret line="103" selection-start-line="103" selection-end-line="103" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>

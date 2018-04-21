@@ -11,10 +11,9 @@ namespace Shenxianshop\Models;
 
 class ModelBase extends \Phalcon\Mvc\Model
 {
-    protected $_redis;
+    protected $_cache;
     public function initialize(){
-        $this->_redis=  \Phalcon\Di::getDefault()->getShared('redis');
-
+        $this->_cache=  \Phalcon\Di::getDefault()->getShared('cache');
     }
 
 }

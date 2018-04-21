@@ -10,9 +10,9 @@ class IndexController extends ControllerBase
     public function indexAction(){
         //var_dump(new Admin());
 
-        $admin = new Admin();
-        var_dump($admin);
-        exit;
+       // $admin = new Admin();
+     //   var_dump($admin);
+       // exit;
     }
 
 }

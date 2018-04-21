@@ -197,6 +197,17 @@ class Config extends \Phalcon\Mvc\Model
     {
         return parent::findFirst($parameters);
     }
+    public  function configlist($parameters = null){
+        $cache =$this->_cache;
+        if($cache){
+            if(!$cache->get($this->getSource().'_configlist')){
+                $cache->save($this->getSource().'_configlist',serialize(parent::find($parameters)->toArray()));
+            }
+            return unserialize($cache->get($this->getSource().'_configlist'));
+        }else{
+            return parent::find()->toArray($parameters);
+        }
+    }
 
     /**
      * Independent Column Mapping.

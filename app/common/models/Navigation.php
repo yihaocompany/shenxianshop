@@ -1,8 +1,6 @@
 <?php
-
 namespace Shenxianshop\Models;
-
-class Navigation extends \Phalcon\Mvc\Model
+class Navigation extends  \Shenxianshop\Models\ModelBase
 {
 
     /**
@@ -190,9 +188,8 @@ class Navigation extends \Phalcon\Mvc\Model
     /**
      * Initialize method for model.
      */
-    public function initialize()
-    {
-
+    public function initialize(){
+        parent::initialize();
         $this->setSource("navigation");
     }
 
@@ -201,8 +198,7 @@ class Navigation extends \Phalcon\Mvc\Model
      *
      * @return string
      */
-    public function getSource()
-    {
+    public function getSource(){
         return 'navigation';
     }
 
@@ -215,6 +211,7 @@ class Navigation extends \Phalcon\Mvc\Model
     public static function find($parameters = null)
     {
         return parent::find($parameters);
+
     }
 
     /**
@@ -227,6 +224,21 @@ class Navigation extends \Phalcon\Mvc\Model
     {
         return parent::findFirst($parameters);
     }
+
+
+    public function navigationmenu(){
+         $contidions="is_show = 1 ORDER BY sort  DESC";
+         $cache =$this->_cache;
+        if($cache){
+            if(!$cache->get($this->getSource().'_navigationmenu')){
+                $cache->save($this->getSource().'_navigationmenu',serialize(parent::find($contidions)->toArray()));
+            }
+            return unserialize($cache->get($this->getSource().'_navigationmenu'));
+        }else{
+            return parent::find()->toArray($contidions);
+        }
+    }
+
 
     /**
      * Independent Column Mapping.

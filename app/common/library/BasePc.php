@@ -16,5 +16,14 @@ class BasePc extends  \Shenxianshop\Base{
         $category=new \Shenxianshop\Models\GoodsCategory();
         $this->category=$category->get_goods_category();
         $this->view->setVar('category', $this->category);
+        $Navigation=new \Shenxianshop\Models\Navigation();
+        $this->view->setVar('nav',$Navigation->navigationmenu());
+        $configlist = new \Shenxianshop\Models\Config();
+        $conArray=null;
+        foreach ($configlist->configlist() as $item){
+            $conArray[$item['name']."_".$item['inc_type']]=$item['value'];
+        }
+        $this->view->setVar('_configure',$conArray);
+
     }
 }

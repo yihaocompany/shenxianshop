@@ -7,15 +7,30 @@ use Shenxianshop\Models\Admin;
 class AdminController extends ControllerBase
 {
     public function indexAction(){
+        $url="/back/admin/login";
+
+        try{
+            $url= $this->cookies->get('url');
+
+            $this->view->setVars('url',  $url);
+        }catch (\Exception $e){
+            $this -> write_exception_log($e);
+            $this->view->setVars('url',  $url);
+        }
+        $this->view->disableLevel(View::LEVEL_MAIN_LAYOUT);
     }
     public function loginAction(){
-       /* echo "<pre>";
-        $admin=new Admin();
-        var_dump($admin->findFirst()->toArray());
-        echo "</pre>";
-        exit;*/
-       $this->view->disableLevel(View::LEVEL_MAIN_LAYOUT);
+        $this->view->disableLevel(View::LEVEL_MAIN_LAYOUT);
     }
+
+    public function signoutAction(){
+         $this->session->destroy();
+         $this->cookies->set('url','/back/admin/login');
+         $this->response->redirect('/back/admin/index/index');
+
+    }
+
+
     public function checkAction(){
         try {
             $code = $this->request->getPost('code');
@@ -61,8 +76,6 @@ class AdminController extends ControllerBase
             //var_dump($e);
             // return $this -> response -> redirect('/404');
         }
-
-
     }
 }
 

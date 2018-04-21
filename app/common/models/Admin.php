@@ -527,7 +527,7 @@ class Admin extends \Shenxianshop\Models\ModelBase
             if($user->getPassword()!=md5($pass)){
                 return false;
             }else{
-                $this -> getDI() -> get('session') -> set('user',$user);
+                $this -> getDI() -> get('session') -> set('admin',$user);
                 return true;
             }
         }else{

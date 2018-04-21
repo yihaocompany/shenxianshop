@@ -379,12 +379,12 @@ class GoodsCategory extends ModelBase
      */
 
     public  function get_goods_category(){
-             $redis =$this->_redis;
-             if($redis){
-                if(!$redis->get('goodscategory')){
-                    $redis->set('goodscategory',serialize(parent::find()->toArray()));
+             $cache =$this->_cache;
+             if($cache){
+                if(!$cache->get('goodscategory')){
+                    $cache->save('goodscategory',serialize(parent::find()->toArray()));
                 }
-                return unserialize($redis->get('goodscategory'));
+                return unserialize($cache->get('goodscategory'));
             }else{
                 return parent::find()->toArray();
             }

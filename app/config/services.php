@@ -131,6 +131,9 @@ $di->setShared('cookies', function () {
     return $cookies;
 });
 
+$di->set('modelsManager', function() {
+    return new Phalcon\Mvc\Model\Manager();
+});
 
 
 

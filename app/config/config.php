@@ -17,7 +17,6 @@ return new \Phalcon\Config([
     ],
     //从库
     'databaseslave'=>[
-
         'adapter'  => 'Mysql',
         'host'     => 'localhost',
         'username' => 'root',
@@ -25,7 +24,6 @@ return new \Phalcon\Config([
         'dbname'   => 'shenxianshop',
         'charset'  => 'utf8',
     ],
-
     //redis
     'redis'=>[
         'prefix'     => '',
@@ -35,8 +33,6 @@ return new \Phalcon\Config([
         'persistent' => false,
         "index"      => 0,
      ],
-
-
 
     'application' => [
         'appDir'         => APP_PATH . '/',

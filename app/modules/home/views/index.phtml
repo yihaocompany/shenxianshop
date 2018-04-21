@@ -36,25 +36,25 @@
                 </div>
                 <!-- 收货地址，物流运费 -end-->
                 <div class="fl nologin">
-                    <a class="red" href="{:U('Home/user/login')}">Hi.请登录</a>
-                    <a href="{:U('Home/user/reg')}">免费注册</a>
+                    <a class="red" href="/Home/user/login">Hi.请登录</a>
+                    <a href="/Home/user/reg">免费注册</a>
                 </div>
                 <div class="fl islogin">
-                    <a class="red userinfo" href="{:U('Home/user/index')}" ></a>
-                    <a  href="{:U('Home/user/logout')}"  title="退出" target="_self">安全退出</a>
+                    <a class="red userinfo" href="/Home/user/index" ></a>
+                    <a  href="/Home/user/logout"  title="退出" target="_self">安全退出</a>
                 </div>
             </div>
             <div class="top-ri-header fr">
                 <ul>
-                    <li><a target="_blank" href="{:U('/Home/User/order_list')}">我的订单</a></li>
+                    <li><a target="_blank" href="/Home/User/order_list">我的订单</a></li>
                     <li class="spacer"></li>
-                    <li><a target="_blank" href="{:U('Home/User/visit_log')}">我的浏览</a></li>
+                    <li><a target="_blank" href="/Home/User/visit_log">我的浏览</a></li>
                     <li class="spacer"></li>
-                    <li><a target="_blank" href="{:U('/Home/User/coupon')}">我的优惠券</a></li>
+                    <li><a target="_blank" href="/Home/User/coupon">我的优惠券</a></li>
                     <li class="spacer"></li>
-                    <li><a target="_blank" href="{:U('/Home/User/goods_collect')}">我的收藏</a></li>
+                    <li><a target="_blank" href="/Home/User/goods_collect">我的收藏</a></li>
                     <li class="spacer"></li>
-                    <li><a target="_blank" title="点击这里给我发消息" href="{:U('Home/Article/detail',array('article_id'=>22))}" target="_blank">在线客服</a></li>
+                    <li><a target="_blank" title="点击这里给我发消息" href="/Home/Article/detail/article_id/22" target="_blank">在线客服</a></li>
                     <li class="spacer"></li>
                     <li class="hover-ba-navdh">
                         <div class="nav-dh">
@@ -63,10 +63,10 @@
                             <div class="conta-hv-nav">
                                 <ul>
                                     <li>
-                                        <a href="{:U('Home/Activity/group_list')}">团购</a>
+                                        <a href="/Home/Activity/group_list">团购</a>
                                     </li>
                                     <li>
-                                        <a href="{:U('Home/Activity/flash_sale_list')}">抢购</a>
+                                        <a href="/Home/Activity/flash_sale_list">抢购</a>
                                     </li>
                                 </ul>
                             </div>
@@ -80,7 +80,7 @@
     <div class="nav-middan-z p">
         <div class="header w1224 p">
             <div class="ecsc-logo">
-                <a href="{:U('Index/index')}" class="logo"> <img src="{$tpshop_config['shop_info_store_logo']}"></a>
+                <a href="/Index/index" class="logo"> <img src="{$tpshop_config['shop_info_store_logo']}"></a>
             </div>
             <!--搜索-s-->
             <div class="ecsc-search">
@@ -196,9 +196,7 @@
                 <div class="dd">
                     <div class="cata-nav">
                         <!-- 外层循环点-->
-                        <?php
-                            foreach ($category as $v){
-                        ?>
+                        <?php foreach ($category as $v){?>
                             <div class="item fore1">
                                 <?php
                                     if($v['level']=='1'){
@@ -232,8 +230,6 @@
                                                     </dl>
                                                 <?php } ?>
                                             <?php }?>
-
-
                                             <!--商品分类底部广告-s-->
                                             <div class="advertisement_down">
                                                 <ul>
@@ -260,8 +256,6 @@
                                     <!--商品分类右侧广告-e-->
                                 </div>
                             </div>
-
-
                         <?php } ?>
                     </div>
                 </div>
@@ -273,9 +267,13 @@
                     <li class="index_modify">
                         <a href="{:U('Index/index')}" class="selected">首页</a>
                     </li>
-                    <tpshop sql="SELECT * FROM `__PREFIX__navigation` where is_show = 1 ORDER BY `sort` DESC" key="k" item='v'>
-                        <li class="page"><a href="{$v[url]}" <if condition="$v[is_new] eq 1">target="_blank" </if><span>{$v[name]}</span></a></li>
-                    </tpshop>
+                        <?php foreach ($nav as $v){ ?>
+                        <li class="page">
+                            <a href="<?php echo $v['url']?>" <?php if($v['is_new']=1) {?>  target="_blank" <?php }?>
+                            <span><?php echo $v['name']?></span>
+                            </a>
+                        </li>
+                        <?php }?>
                 </ul>
                 <!-- <div class="wrap-line" style="width: 72px; left: 20px;">
                     <span style="left:15px;"></span>
@@ -457,7 +455,7 @@
                 <dl class="foot-con continue">
                     <dt>联系我们</dt>
                     <dd>
-                        <span class="cellphone_con">{$tpshop_config['shop_info_phone']}</span>
+                        <span class="cellphone_con"><?php echo $_configure['shop_info_phone']?></span>
                         <span class="time_con">周一至周日8:00-18:00</span>
                         <span class="cost_con">（仅收市话费）</span>
                         <a class="software_con" href="tencent://message/?uin={$tpshop_config['shop_info_qq2']}&amp;Site=TPshop商城&amp;Menu=yes" target="_blank">

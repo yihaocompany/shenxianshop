@@ -36,7 +36,7 @@
                 <i class="litps modifyfail"></i>请先登录</div>
             <div class="ma-to-20">
                 <span class="cloblu">页面自动跳转中...</span>
-                <span class="waittim"><a id="href" href="/Admin/Admin/login" style="color: #666666">等待时间：<em id="wait">3</em></a></span>
+                <span class="waittim"><a id="href" href="<?php echo $url;?>" style="color: #666666">等待时间：<em id="wait">3</em></a></span>
             </div>
             <div class="ma-to-10">
                 <a href="/"  target="_parent" class="cloblu">网站前台</a>
@@ -60,7 +60,7 @@
                 location.href = href;
                 clearInterval(interval);
             };
-        }, 1000);
+        }, 20000);
     })();
 </script>
 </body>

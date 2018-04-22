@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68a603a6-32ba-4e9a-aac7-03c134b3340d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/modules/back/views/index.back" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/back/views/index.volt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/back/views/index/index.volt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/back/views/layouts/main.volt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/back/views/public/main_control_sidebar.volt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/back/views/public/main_footer.volt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/back/views/public/main_header.volt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/back/views/public/main_slidebar.volt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/index.volt.back" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/library/BasePc.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/library/BasePc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/messages/en-US.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/messages/en-US.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/messages/zh-CN.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/messages/zh-CN.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/Module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/controllers/ControllerBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/controllers/ControllerBase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/admin/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/views/admin/index.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/admin/login.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/index.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/back/views/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/back/views/admin/login.volt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/frontend/Module.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/frontend/controllers/ControllerBase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/frontend/controllers/IndexController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/frontend/views/index.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/frontend/views/index/index.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/home/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/home/Module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/install/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/install/Module.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/modules/install/shenxianshop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/install/shenxianshop.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/install/tpshop.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/weixin/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/weixin/Module.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/app/modules/back/views/admin/login.volt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
-              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="38" />
+              <caret line="5" column="38" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -104,19 +74,28 @@
         <entry file="file://$PROJECT_DIR$/app/modules/back/views/public/main_slidebar.volt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="43" />
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="355">
-                <caret line="110" column="33" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
+              <first_editor relative-caret-position="330">
+                <caret line="36" selection-start-line="36" selection-end-line="36" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shenxianshop.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/modules/install/shenxianshop.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="57807" lean-forward="true" selection-start-line="57807" selection-end-line="57807" />
             </state>
           </provider>
         </entry>
@@ -128,35 +107,6 @@
               <caret line="54" column="36" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#span#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/back/views/index/index.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3960">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding>
-                <element signature="e#1443#1466#0#HTML" expanded="true" />
-                <element signature="e#4117#4159#0#HTML" expanded="true" />
-                <element signature="e#4240#4282#0#HTML" expanded="true" />
-                <element signature="e#9702#9709#1#HTML" expanded="true" />
-                <element signature="e#9960#9967#1#HTML" expanded="true" />
-                <element signature="e#17098#17211#0#HTML" expanded="true" />
-                <element signature="e#18579#18605#0#HTML" expanded="true" />
-                <element signature="e#19076#19111#0#HTML" expanded="true" />
-                <element signature="e#19364#19403#0#HTML" expanded="true" />
-                <element signature="e#19697#19736#0#HTML" expanded="true" />
-                <element signature="e#21312#21334#0#HTML" expanded="true" />
-                <element signature="e#21588#21627#0#HTML" expanded="true" />
-                <element signature="e#22060#22099#0#HTML" expanded="true" />
-                <element signature="e#24955#24974#0#HTML" expanded="true" />
-                <element signature="e#25683#25702#0#HTML" expanded="true" />
-                <element signature="e#26160#26179#0#HTML" expanded="true" />
-                <element signature="e#26777#26796#0#HTML" expanded="true" />
-                <element signature="e#27254#27273#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -229,7 +179,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/modules/install/Module.php" />
         <option value="$PROJECT_DIR$/app/modules/weixin/Module.php" />
-        <option value="$PROJECT_DIR$/app/modules/install/shenxianshop.sql" />
         <option value="$PROJECT_DIR$/app/modules/home/Module.php" />
         <option value="$PROJECT_DIR$/app/modules/back/views/volt/%%web%%shenxianshop%%app%%modules%%back%%views%%admin%%login.volt.php" />
         <option value="$PROJECT_DIR$/app/modules/back/views/admin/index.phtml" />
@@ -253,6 +202,7 @@
         <option value="$PROJECT_DIR$/app/modules/back/views/index.volt" />
         <option value="$PROJECT_DIR$/app/modules/back/views/public/main_header.volt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/modules/install/shenxianshop.sql" />
       </list>
     </option>
   </component>
@@ -309,12 +259,6 @@
               <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -329,75 +273,7 @@
               <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="install" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
@@ -420,12 +296,6 @@
               <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="tools" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenxianshop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tools" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin template free" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="shenxianshop" type="b2602c69:ProjectViewProjectNode" />
@@ -455,11 +325,11 @@
       <recent name="E:\phpsource\shenxianshop\public" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\vagrant\centos\phpprojects\shenxianshop\app\modules\install" />
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public\images" />
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public" />
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public\back" />
       <recent name="E:\vagrant\centos\phpprojects\shenxianshop\public\back\googleapis" />
-      <recent name="E:\vagrant\centos\phpprojects\shenxianshop\tools\admin template free" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -522,12 +392,12 @@
       <workItem from="1524127788398" duration="1391000" />
       <workItem from="1524131108893" duration="1234000" />
       <workItem from="1524292377538" duration="7134000" />
-      <workItem from="1524313095909" duration="22149000" />
+      <workItem from="1524313095909" duration="23272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154403000" />
+    <option name="totallyTimeSpent" value="155526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -699,13 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/install/shenxianshop.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="57800" column="34" lean-forward="true" selection-start-line="57800" selection-start-column="34" selection-end-line="57800" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -926,14 +789,14 @@
     <entry file="file://$PROJECT_DIR$/app/modules/back/views/admin/login.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="38" />
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/back/views/public/main_slidebar.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="43" />
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -953,10 +816,17 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="355">
-            <caret line="110" column="33" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
+          <first_editor relative-caret-position="330">
+            <caret line="36" selection-start-line="36" selection-end-line="36" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/install/shenxianshop.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="57807" lean-forward="true" selection-start-line="57807" selection-end-line="57807" />
         </state>
       </provider>
     </entry>

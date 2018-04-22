@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2018-04-21 14:53:58
--- 服务器版本： 5.7.21-log
+-- Generation Time: Apr 22, 2018 at 04:33 PM
+-- Server version: 5.7.21-log
 -- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `account_log`
+-- Table structure for table `account_log`
 --
 
 CREATE TABLE IF NOT EXISTS `account_log` (
@@ -36,12 +36,12 @@ CREATE TABLE IF NOT EXISTS `account_log` (
   `desc` varchar(255) NOT NULL DEFAULT '' COMMENT '描述',
   `order_sn` varchar(50) DEFAULT NULL COMMENT '订单编号',
   `order_id` int(10) DEFAULT NULL COMMENT '订单id'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ad`
+-- Table structure for table `ad`
 --
 
 CREATE TABLE IF NOT EXISTS `ad` (
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `ad` (
 ) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `ad`
+-- Dumping data for table `ad`
 --
 
 INSERT INTO `ad` (`ad_id`, `pid`, `media_type`, `ad_name`, `ad_link`, `ad_code`, `start_time`, `end_time`, `link_man`, `link_email`, `link_phone`, `click_count`, `enabled`, `orderby`, `target`, `bgcolor`) VALUES
@@ -143,7 +143,7 @@ INSERT INTO `ad` (`ad_id`, `pid`, `media_type`, `ad_name`, `ad_link`, `ad_code`,
 -- --------------------------------------------------------
 
 --
--- 表的结构 `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE IF NOT EXISTS `admin` (
@@ -164,12 +164,12 @@ CREATE TABLE IF NOT EXISTS `admin` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`admin_id`, `user_name`, `email`, `password`, `ec_salt`, `add_time`, `last_login`, `last_ip`, `nav_list`, `lang_type`, `agency_id`, `suppliers_id`, `todolist`, `role_id`) VALUES
 (1, 'admin', 'admin@admin.coom', '21232f297a57a5a743894a0e4a801fc3', '', 1428974654, 1495591379, '127.0.0.1', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', 0, 0, NULL, 1),
-(2, 'bjgonghuo1', 'bj@163.com', '21232f297a57a5a743894a0e4a801fc3', NULL, 1245044099, 0, '', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', 0, 1, '', 2),
+(2, 'wanghaibin', 'bj@163.com', '21232f297a57a5a743894a0e4a801fc3', NULL, 1245044099, 0, '', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', 0, 1, '', 2),
 (3, 'shhaigonghuo1', 'shanghai@163.com', '21232f297a57a5a743894a0e4a801fc3', NULL, 1245044202, 0, '', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', 0, 2, '', 2),
 (4, 'wyp001', 'wyp001@126.com', '21232f297a57a5a743894a0e4a801fc3', NULL, 1456542538, 1486203678, '127.0.0.1', '', '', 0, 0, NULL, 2),
 (5, 'dengyunrui', 'dengyunrui@qq.com', '21232f297a57a5a743894a0e4a801fc3', NULL, 1472610878, 1473055070, '183.14.137.252', '', '', 0, 0, NULL, 2),
@@ -179,7 +179,7 @@ INSERT INTO `admin` (`admin_id`, `user_name`, `email`, `password`, `ec_salt`, `a
 -- --------------------------------------------------------
 
 --
--- 表的结构 `admin_log`
+-- Table structure for table `admin_log`
 --
 
 CREATE TABLE IF NOT EXISTS `admin_log` (
@@ -189,13 +189,12 @@ CREATE TABLE IF NOT EXISTS `admin_log` (
   `log_ip` varchar(30) DEFAULT NULL COMMENT 'ip地址',
   `log_url` varchar(50) DEFAULT NULL COMMENT 'url',
   `log_time` int(10) DEFAULT NULL COMMENT '日志时间'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `admin_role`
+-- Table structure for table `admin_role`
 --
 
 CREATE TABLE IF NOT EXISTS `admin_role` (
@@ -206,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `admin_role` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `admin_role`
+-- Dumping data for table `admin_role`
 --
 
 INSERT INTO `admin_role` (`role_id`, `role_name`, `act_list`, `role_desc`) VALUES
@@ -219,7 +218,7 @@ INSERT INTO `admin_role` (`role_id`, `role_name`, `act_list`, `role_desc`) VALUE
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ad_position`
+-- Table structure for table `ad_position`
 --
 
 CREATE TABLE IF NOT EXISTS `ad_position` (
@@ -233,7 +232,7 @@ CREATE TABLE IF NOT EXISTS `ad_position` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5137 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `ad_position`
+-- Dumping data for table `ad_position`
 --
 
 INSERT INTO `ad_position` (`position_id`, `position_name`, `ad_width`, `ad_height`, `position_desc`, `position_style`, `is_open`) VALUES
@@ -340,7 +339,7 @@ INSERT INTO `ad_position` (`position_id`, `position_name`, `ad_width`, `ad_heigh
 -- --------------------------------------------------------
 
 --
--- 表的结构 `area_region`
+-- Table structure for table `area_region`
 --
 
 CREATE TABLE IF NOT EXISTS `area_region` (
@@ -349,7 +348,7 @@ CREATE TABLE IF NOT EXISTS `area_region` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `area_region`
+-- Dumping data for table `area_region`
 --
 
 INSERT INTO `area_region` (`shipping_area_id`, `region_id`) VALUES
@@ -371,7 +370,7 @@ INSERT INTO `area_region` (`shipping_area_id`, `region_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `article`
+-- Table structure for table `article`
 --
 
 CREATE TABLE IF NOT EXISTS `article` (
@@ -395,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `article` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1412 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `article`
+-- Dumping data for table `article`
 --
 
 INSERT INTO `article` (`article_id`, `cat_id`, `title`, `content`, `author`, `author_email`, `keywords`, `article_type`, `is_open`, `add_time`, `file_url`, `open_type`, `link`, `description`, `click`, `publish_time`, `thumb`) VALUES
@@ -566,9 +565,9 @@ INSERT INTO `article` (`article_id`, `cat_id`, `title`, `content`, `author`, `au
 (236, 52, '【招聘】JAVA技术经理', '<p>30w-50w</p><p>上市公司，互联网金融，股权激励，合伙人，15薪，带薪年假，期权奖励，车辆津贴，通讯津贴，五险一金，年终绩效奖金，午餐补助</p><p><img src="http://www.2345.net/assets/201603/pic/life3.jpg" width="378" height="200"/></p><p>活动间</p><p><img src="http://www.2345.net/assets/201603/pic/life7.jpg" width="378" height="200"/></p><p>免费早餐</p><p><br/></p><p>工作职责：</p><p>1、负责互联网金融事业部IT战略规划的制定、实施、建设并提供全方位前瞻性的保障；&nbsp;</p><p>2、参与制定公司发展战略、年度经营计划，组织制定和实施重大技术决策和技术方案；&nbsp;</p><p>3、有效沟通业务、职能部门，提供IT技术服务支持；&nbsp;</p><p>4、负责建立、完善公司IT相关流程、制度、组织架构，制定并组织IT人员的培训计划；&nbsp;</p><p>5、根据公司业务发展及行业发展态势，提出前瞻性产品开发改善计划并快速加以落实。</p><p>任职资格：</p><p>1、大专及以上学历，5年以上Java开发及管理经验，有互联网金融行业经验者优；</p><p>2、精通Mysql, SqlServer, Oracle等数据库，精通Java, C#, PHP,C++等语言的至少两种，熟悉各类项目管理工具；掌握Java J2EE框架，对 Spring、Struts、Hibernate等开源框架应用经验丰富；&nbsp;</p><p>3、深刻理解软件研发过程和生命周期，具备良好的管控技能；&nbsp;</p><p>4、动态把握互联网金融行业运营、用户、技术、产品等变化和发展趋势（含对竞争对手的分析了解）；&nbsp;</p><p>5、具备互联网运营思维维度及用户体验至上价值观，对互联网金融格局及其执行运营有深刻理解；</p><p>联系人：Chase</p><p>QQ：2781660933</p>', '2781660933@qq.com', '', '', 2, 0, 1464767268, '', 0, '', NULL, 33, 1464767268, ''),
 (237, 52, '【招聘】PHP高级开发工程师', '<p>30-50万（可谈）+期权</p><p>深圳市 南山区</p><p>工作职责：</p><p>1、负责互联网金融网站和H5站点的建设和开发工作；&nbsp;</p><p>2、参与系统的需求分析、设计、编码等开发工作；&nbsp;</p><p>3、负责相关系统的运营和维护工作，保证系统稳定可靠运行。</p><p><br/></p><p>活动间</p><p><img src="http://www.2345.net/assets/201603/pic/life3.jpg" height="200" width="378"/></p><p>免费早餐</p><p><img src="http://www.2345.net/assets/201603/pic/life7.jpg" height="200" width="378"/></p><p>任职资格：</p><p>1、本科或以上学历，计算机或相关专业；&nbsp;</p><p>2、2年以上PHP开发经验，能够独立编写中等规模PHP应用程序；&nbsp;</p><p>3、精通PHP+MYSQL编程，熟练使用Javascrīpt、Ajax以及CSS编写；&nbsp;</p><p>4、了解Linux操作系统，了解Linux下简单编程，精通php的面向对象编程，精通php的模板编程；&nbsp;</p><p>5、熟悉MYSQL数据库开发、配置、维护、性能优化；&nbsp;</p><p>6、具有MySQL索引优化、查询优化和存储优化经验方面的经验，要求随时随地贯彻最优化开发的思想；&nbsp;</p><p>7、必须拥有良好的代码习惯，要求结构清晰，命名规范，逻辑性强，代码冗余率低；&nbsp;</p><p>8、熟练应用Subversion进行协作开发，有撰写设计文档的习惯，有团队开发经验；&nbsp;</p><p>9、熟悉XHTML、XML、JSON；&nbsp;</p><p>10、热爱开发工作，团队合作意识良好；&nbsp;</p><p>11、做过ui设计或熟练使用绘图软件的优先考虑。</p><p>P.S.有大型互联网金融公司经验者最好，试用期薪资不打折，学历必须本科及以上，看重技术基础</p><p>联系人：Chase</p><p>QQ：2781660933</p>', '2781660933@qq.com', '', '', 2, 0, 1464768131, '', 0, '', '', 72, 1464710400, ''),
 (238, 25, '查看某个商品是否可以申请退换货', '&lt;h2&gt;申请退换货&lt;/h2&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;117&quot;&gt;&lt;p&gt;URL地址&lt;/p&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; valign=&quot;top&quot; width=&quot;451&quot;&gt;&lt;p&gt;www.mingshop.com/api/User/return_goods_status&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;117&quot;&gt;&lt;p&gt;请求方式&lt;/p&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; valign=&quot;top&quot; width=&quot;451&quot;&gt;&lt;p&gt;post&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;参数列表 &lt;/strong&gt;&lt;/p&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;189&quot;&gt;&lt;p&gt;&lt;strong&gt;参数&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;&lt;td valign=&quot;top&quot; width=&quot;189&quot;&gt;&lt;p&gt;&lt;strong&gt;是否必须&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;&lt;td valign=&quot;top&quot; width=&quot;189&quot;&gt;&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot;&gt;goods_id&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot;&gt;必须&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot;&gt;商品id&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot;&gt;order_id&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot;&gt;必须&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot;&gt;订单id&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot; style=&quot;word-break: break-all;&quot;&gt;spec_key&lt;/td&gt;&lt;td rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot; style=&quot;word-break: break-all;&quot;&gt;必须&lt;/td&gt;&lt;td rowspan=&quot;1&quot; colspan=&quot;1&quot; valign=&quot;top&quot; style=&quot;word-break: break-all;&quot;&gt;商品规格KEY&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;示例&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;pre class=&quot;brush:php;toolbar:false&quot;&gt;/**\r\n{\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;quot;status&amp;quot;:&amp;nbsp;1,\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;quot;msg&amp;quot;:&amp;nbsp;&amp;quot;可以去申请退货&amp;quot;,\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;quot;result&amp;quot;:&amp;nbsp;&amp;quot;1&amp;quot;&amp;nbsp;&amp;nbsp;//如果是1:&amp;nbsp;可以去申请退货,&amp;nbsp;-1:&amp;nbsp;退货中.\r\n}\r\n*/&lt;/pre&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '', '', '', 2, 1, 1464769568, '', 0, '', '', 1035, 1464796800, ''),
-(239, 30, '订单删除不了 是没这功能么？', '<p>如题</p>', '353613624@qq.com', '', '', 2, 1, 1464772719, '', 0, '', NULL, 102, 1464772719, ''),
-(240, 52, '【招聘】PHP高级开发工程师', '<p><strong>20w-30w</strong></p><p><strong><br/></strong></p><p><strong>工作职责：&nbsp;</strong></p><p>•	负责项目的应用层开发工作，并按照项目进度的计划完成开发任务并及时解决项目技术问题；&nbsp;</p><p>•	参与系统需求分析与设计，并负责完成核心代码，接口规范制定，架构设计； •	参与软件需求与设计审核和代码检查等工作；</p><p><strong>任职资格：</strong></p><p>•	至少3年的面向对象的PHP编程经验。</p><p>•	2年以上LNMP架构下高并发，拥有在线网站实际研发经验；&nbsp;</p><p>•	精通MySQL数据库，表设计，性能调优，数据库Shard设计(数据库分割，表分割，构建数据库集群)；&nbsp;</p><p>•	熟悉两种以上的PHP框架，如Yii, Zend或SF2等；&nbsp;</p><p>•	熟悉Linux环境下多种应用，熟练掌握他们的配置、部署及管理方法;&nbsp;</p><p>•	责任心强，具有良好的沟通、协作能力和团队合作意识；</p><p>联系人：Chase</p><p>QQ：2781660933</p>', '2781660933@qq.com', '', '', 2, 0, 1464774044, '', 0, '', NULL, 127, 1464774044, '');
+(239, 30, '订单删除不了 是没这功能么？', '<p>如题</p>', '353613624@qq.com', '', '', 2, 1, 1464772719, '', 0, '', NULL, 102, 1464772719, '');
 INSERT INTO `article` (`article_id`, `cat_id`, `title`, `content`, `author`, `author_email`, `keywords`, `article_type`, `is_open`, `add_time`, `file_url`, `open_type`, `link`, `description`, `click`, `publish_time`, `thumb`) VALUES
+(240, 52, '【招聘】PHP高级开发工程师', '<p><strong>20w-30w</strong></p><p><strong><br/></strong></p><p><strong>工作职责：&nbsp;</strong></p><p>•	负责项目的应用层开发工作，并按照项目进度的计划完成开发任务并及时解决项目技术问题；&nbsp;</p><p>•	参与系统需求分析与设计，并负责完成核心代码，接口规范制定，架构设计； •	参与软件需求与设计审核和代码检查等工作；</p><p><strong>任职资格：</strong></p><p>•	至少3年的面向对象的PHP编程经验。</p><p>•	2年以上LNMP架构下高并发，拥有在线网站实际研发经验；&nbsp;</p><p>•	精通MySQL数据库，表设计，性能调优，数据库Shard设计(数据库分割，表分割，构建数据库集群)；&nbsp;</p><p>•	熟悉两种以上的PHP框架，如Yii, Zend或SF2等；&nbsp;</p><p>•	熟悉Linux环境下多种应用，熟练掌握他们的配置、部署及管理方法;&nbsp;</p><p>•	责任心强，具有良好的沟通、协作能力和团队合作意识；</p><p>联系人：Chase</p><p>QQ：2781660933</p>', '2781660933@qq.com', '', '', 2, 0, 1464774044, '', 0, '', NULL, 127, 1464774044, ''),
 (241, 30, 'ecshop数据导入Mingshop插件', '<p>本插件由 Leebs(752848281); 开发 <br/></p><p>作者QQ :Leebs(752848281);</p><p>作者邮箱:752848281</p><p>本插件适合版本 v1.2.0,v1.2.1,v1.2.2</p><p>要求, Mingshop 必须在空数据的情况下导入, 且id为插入导入,而非自增, 否则关系对应不上.</p><p>收货地址id 请自行同步mingshop 的地址列表id</p><p>讲插件解压拷贝到 www\\plugins\\function&nbsp; 到后台插件列表 功能插件 安装 配置 然后再 继续 配置 即可</p><p>本插件由 Leebs(752848281); 发明. 你可以捐助 Leebs(752848281);</p>', 'qq:752848281', '', '', 2, 1, 1464779780, '/Public/upload/article/2016-06-01/file_241.zip', 0, '', NULL, 126, 1464779780, ''),
 (244, 33, '官方伪静态能不能优化下、', '<p><a href="http://demo.tp-shop.cn/Home/Goods/goodsList/id/19.html" _src="http://demo.tp-shop.cn/Home/Goods/goodsList/id/19.html">http://demo.tp-shop.cn/Home/Goods/goodsList/id/19.html</a></p><p>像这样列表页层级太多了</p><p>能不能优化成这种</p><p>http://demo.tp-shop.cn/list/19/</p><p><br/></p><p><a href="http://demo.tp-shop.cn/Home/Goods/goodsInfo/id/98.html" _src="http://demo.tp-shop.cn/Home/Goods/goodsInfo/id/98.html">http://demo.tp-shop.cn/Home/Goods/goodsInfo/id/98.html</a> </p><p>商城页这样</p><p>能不能优化成这样</p><p>http://demo.tp-shop.cn/goods/98/<br/></p>', '7642837', '', '', 2, 1, 1464869378, '', 0, '', NULL, 119, 1464869378, ''),
 (245, 33, '安装后wap站在PC浏览器可以打开，手机上却提示在域名根目录下安装！', '<p>&nbsp;安装后wap站在PC浏览器可以打开，手机上却提示在域名根目录下安装！还有就是，跟我用二级域名，虚拟主机安装，有没有关系？&nbsp;</p><p><br/></p>', '120349807', '', '', 2, 1, 1464928981, '', 0, '', NULL, 66, 1464928981, ''),
@@ -995,7 +994,7 @@ INSERT INTO `article` (`article_id`, `cat_id`, `title`, `content`, `author`, `au
 -- --------------------------------------------------------
 
 --
--- 表的结构 `article_cat`
+-- Table structure for table `article_cat`
 --
 
 CREATE TABLE IF NOT EXISTS `article_cat` (
@@ -1011,7 +1010,7 @@ CREATE TABLE IF NOT EXISTS `article_cat` (
 ) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `article_cat`
+-- Dumping data for table `article_cat`
 --
 
 INSERT INTO `article_cat` (`cat_id`, `cat_name`, `cat_type`, `parent_id`, `show_in_nav`, `sort_order`, `cat_desc`, `keywords`, `cat_alias`) VALUES
@@ -1090,7 +1089,7 @@ INSERT INTO `article_cat` (`cat_id`, `cat_name`, `cat_type`, `parent_id`, `show_
 -- --------------------------------------------------------
 
 --
--- 表的结构 `article_cat_2`
+-- Table structure for table `article_cat_2`
 --
 
 CREATE TABLE IF NOT EXISTS `article_cat_2` (
@@ -1106,7 +1105,7 @@ CREATE TABLE IF NOT EXISTS `article_cat_2` (
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `article_cat_2`
+-- Dumping data for table `article_cat_2`
 --
 
 INSERT INTO `article_cat_2` (`cat_id`, `cat_name`, `cat_type`, `parent_id`, `show_in_nav`, `sort_order`, `cat_desc`, `keywords`, `cat_alias`) VALUES
@@ -1193,7 +1192,7 @@ INSERT INTO `article_cat_2` (`cat_id`, `cat_name`, `cat_type`, `parent_id`, `sho
 -- --------------------------------------------------------
 
 --
--- 表的结构 `brand`
+-- Table structure for table `brand`
 --
 
 CREATE TABLE IF NOT EXISTS `brand` (
@@ -1210,7 +1209,7 @@ CREATE TABLE IF NOT EXISTS `brand` (
 ) ENGINE=InnoDB AUTO_INCREMENT=351 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `brand`
+-- Dumping data for table `brand`
 --
 
 INSERT INTO `brand` (`id`, `name`, `logo`, `desc`, `url`, `sort`, `cat_name`, `parent_cat_id`, `cat_id`, `is_hot`) VALUES
@@ -1565,7 +1564,7 @@ INSERT INTO `brand` (`id`, `name`, `logo`, `desc`, `url`, `sort`, `cat_name`, `p
 -- --------------------------------------------------------
 
 --
--- 表的结构 `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE IF NOT EXISTS `cart` (
@@ -1587,13 +1586,12 @@ CREATE TABLE IF NOT EXISTS `cart` (
   `prom_type` tinyint(1) DEFAULT '0' COMMENT '0 普通订单,1 限时抢购, 2 团购 , 3 促销优惠',
   `prom_id` int(11) DEFAULT '0' COMMENT '活动id',
   `sku` varchar(128) DEFAULT '' COMMENT 'sku'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `comment`
+-- Table structure for table `comment`
 --
 
 CREATE TABLE IF NOT EXISTS `comment` (
@@ -1615,12 +1613,12 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `zan_num` int(10) NOT NULL DEFAULT '0' COMMENT '被赞数',
   `zan_userid` varchar(255) NOT NULL DEFAULT '' COMMENT '点赞用户id',
   `is_anonymous` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否匿名评价:0不是，1是'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+-- --------------------------------------------------------
 
 --
--- 表的结构 `config`
+-- Table structure for table `config`
 --
 
 CREATE TABLE IF NOT EXISTS `config` (
@@ -1632,7 +1630,7 @@ CREATE TABLE IF NOT EXISTS `config` (
 ) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `config`
+-- Dumping data for table `config`
 --
 
 INSERT INTO `config` (`id`, `name`, `value`, `inc_type`, `desc`) VALUES
@@ -1717,7 +1715,7 @@ INSERT INTO `config` (`id`, `name`, `value`, `inc_type`, `desc`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `coupon`
+-- Table structure for table `coupon`
 --
 
 CREATE TABLE IF NOT EXISTS `coupon` (
@@ -1734,13 +1732,12 @@ CREATE TABLE IF NOT EXISTS `coupon` (
   `use_start_time` int(11) DEFAULT NULL COMMENT '使用开始时间',
   `use_end_time` int(11) DEFAULT NULL COMMENT '使用结束时间',
   `add_time` int(11) DEFAULT NULL COMMENT '添加时间'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `coupon_list`
+-- Table structure for table `coupon_list`
 --
 
 CREATE TABLE IF NOT EXISTS `coupon_list` (
@@ -1753,12 +1750,12 @@ CREATE TABLE IF NOT EXISTS `coupon_list` (
   `code` varchar(10) DEFAULT '' COMMENT '优惠券兑换码',
   `send_time` int(11) NOT NULL DEFAULT '0' COMMENT '发放时间',
   `status` tinyint(1) DEFAULT '0' COMMENT '0未使用1已使用2已过期'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+-- --------------------------------------------------------
 
 --
--- 表的结构 `delivery_doc`
+-- Table structure for table `delivery_doc`
 --
 
 CREATE TABLE IF NOT EXISTS `delivery_doc` (
@@ -1784,14 +1781,12 @@ CREATE TABLE IF NOT EXISTS `delivery_doc` (
   `best_time` int(11) DEFAULT NULL COMMENT '友好收货时间',
   `create_time` int(11) NOT NULL COMMENT '创建时间',
   `is_del` tinyint(1) DEFAULT '0' COMMENT '是否删除'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COMMENT='发货单';
-
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='发货单';
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `distribut_goods`
+-- Table structure for table `distribut_goods`
 --
 
 CREATE TABLE IF NOT EXISTS `distribut_goods` (
@@ -1805,7 +1800,7 @@ CREATE TABLE IF NOT EXISTS `distribut_goods` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `expense_log`
+-- Table structure for table `expense_log`
 --
 
 CREATE TABLE IF NOT EXISTS `expense_log` (
@@ -1822,7 +1817,7 @@ CREATE TABLE IF NOT EXISTS `expense_log` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `feedback`
+-- Table structure for table `feedback`
 --
 
 CREATE TABLE IF NOT EXISTS `feedback` (
@@ -1838,12 +1833,12 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   `message_img` varchar(255) NOT NULL DEFAULT '',
   `order_id` int(11) unsigned NOT NULL DEFAULT '0',
   `msg_area` tinyint(1) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+-- --------------------------------------------------------
 
 --
--- 表的结构 `flash_sale`
+-- Table structure for table `flash_sale`
 --
 
 CREATE TABLE IF NOT EXISTS `flash_sale` (
@@ -1860,12 +1855,12 @@ CREATE TABLE IF NOT EXISTS `flash_sale` (
   `end_time` int(11) NOT NULL COMMENT '结束时间',
   `is_end` tinyint(1) DEFAULT '0' COMMENT '是否已结束',
   `goods_name` varchar(255) DEFAULT NULL COMMENT '商品名称'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `friend_link`
+-- Table structure for table `friend_link`
 --
 
 CREATE TABLE IF NOT EXISTS `friend_link` (
@@ -1876,13 +1871,12 @@ CREATE TABLE IF NOT EXISTS `friend_link` (
   `orderby` tinyint(3) unsigned NOT NULL DEFAULT '50' COMMENT '排序',
   `is_show` tinyint(1) DEFAULT '1' COMMENT '是否显示',
   `target` tinyint(1) DEFAULT '1' COMMENT '是否新窗口打开'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods`
+-- Table structure for table `goods`
 --
 
 CREATE TABLE IF NOT EXISTS `goods` (
@@ -1928,7 +1922,7 @@ CREATE TABLE IF NOT EXISTS `goods` (
 ) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `goods`
+-- Dumping data for table `goods`
 --
 
 INSERT INTO `goods` (`goods_id`, `cat_id`, `extend_cat_id`, `goods_sn`, `goods_name`, `click_count`, `brand_id`, `store_count`, `comment_count`, `weight`, `market_price`, `shop_price`, `cost_price`, `price_ladder`, `keywords`, `goods_remark`, `goods_content`, `original_img`, `is_real`, `is_on_sale`, `is_free_shipping`, `on_time`, `sort`, `is_recommend`, `is_new`, `is_hot`, `last_update`, `goods_type`, `spec_type`, `give_integral`, `exchange_integral`, `suppliers_id`, `sales_sum`, `prom_type`, `prom_id`, `commission`, `spu`, `sku`, `shipping_area_ids`) VALUES
@@ -1975,10 +1969,10 @@ INSERT INTO `goods` (`goods_id`, `cat_id`, `extend_cat_id`, `goods_sn`, `goods_n
 (78, 372, 0, 'TP0000078', '皇英格男式修身圆领针织衫WG050黑色 黑色 L', 18, 0, 1000, 3, 500, '218.00', '118.00', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c5d1e198c0.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000134857678_1_720x900 - 1 (1).jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c5d1e36402.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000134857678_1_720x900 - 1 (2).jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c5d1e6206f.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000134857678_1_720x900 - 1 (3).jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c5d1e8c519.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000134857678_1_720x900 - 1 (4).jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c5d1eae08e.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000134857678_1_720x900.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-18/569c5d125e278.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 0, 25, 0, 100, 0, 0, 0, 0, '0.00', '', '', ''),
 (79, 320, 0, 'TP0000079', '恒源祥秋冬新款男士纯色全羊毛衫 中年圆领长袖毛衣 加厚针织衫潮08W18096', 22, 0, 1000, 3, 500, '498.00', '398.00', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c82e49d532.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000123742789_1_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c82e4b5a8b.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000123742789_2_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c82e4d106b.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000123742789_3_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c82e500ec1.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000123742789_4_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c82e520937.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000123742789_5_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-18/569c82d77ebfc.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 25, 25, 0, 100, 0, 0, 0, 0, '0.00', '', '', ''),
 (80, 384, 0, 'TP0000080', '法娇兰一片式无钢圈聚拢文胸 冬季无痕光面内衣女透气调整型胸罩', 19, 0, 1000, 3, 500, '179.00', '79.00', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c863888f0f.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000137277300_1_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c8638a07ee.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000137277300_2_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c8638b9073.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000137277300_3_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c8638d0356.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000137277300_4_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-18/569c863903481.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000137277300_5_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-18/569c862c24b2e.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 26, 26, 0, 100, 0, 0, 0, 0, '0.00', '', '', ''),
-(81, 384, 0, 'TP0000081', '纤慕文胸 女无钢圈聚拢一片式无痕拉丝美背内衣', 87, 0, 600, 3, 500, '208.00', '108.00', '0.00', '', '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '<p><img src="/upload/goods/2016/01-18/569cb70a7a9a6.jpg" style="float:none;" title="000000000139101869_1_400x400.jpg"/></p><p><img src="/upload/goods/2016/01-18/569cb70ab4d97.jpg" style="float:none;" title="000000000139101869_2_400x400.jpg"/></p><p><img src="/upload/goods/2016/01-18/569cb70b901a2.jpg" style="float:none;" title="000000000139101869_3_400x400.jpg"/></p><p><img src="/upload/goods/2016/01-18/569cb70bc8027.jpg" style="float:none;" title="000000000139101869_4_400x400.jpg"/></p><p><img src="/upload/goods/2016/01-18/569cb70c449b0.jpg" style="float:none;" title="000000000139101869_5_400x400.jpg"/></p><p><br/></p>', '/upload/goods/2016/01-18/569cb6fe1e881.jpg', 1, 1, 0, 1495274138, 50, 1, 0, 1, 0, 26, 26, 0, 0, 0, 0, 0, 0, '0.00', '', '', '');
-INSERT INTO `goods` (`goods_id`, `cat_id`, `extend_cat_id`, `goods_sn`, `goods_name`, `click_count`, `brand_id`, `store_count`, `comment_count`, `weight`, `market_price`, `shop_price`, `cost_price`, `price_ladder`, `keywords`, `goods_remark`, `goods_content`, `original_img`, `is_real`, `is_on_sale`, `is_free_shipping`, `on_time`, `sort`, `is_recommend`, `is_new`, `is_hot`, `last_update`, `goods_type`, `spec_type`, `give_integral`, `exchange_integral`, `suppliers_id`, `sales_sum`, `prom_type`, `prom_id`, `commission`, `spu`, `sku`, `shipping_area_ids`) VALUES
+(81, 384, 0, 'TP0000081', '纤慕文胸 女无钢圈聚拢一片式无痕拉丝美背内衣', 87, 0, 600, 3, 500, '208.00', '108.00', '0.00', '', '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '<p><img src="/upload/goods/2016/01-18/569cb70a7a9a6.jpg" style="float:none;" title="000000000139101869_1_400x400.jpg"/></p><p><img src="/upload/goods/2016/01-18/569cb70ab4d97.jpg" style="float:none;" title="000000000139101869_2_400x400.jpg"/></p><p><img src="/upload/goods/2016/01-18/569cb70b901a2.jpg" style="float:none;" title="000000000139101869_3_400x400.jpg"/></p><p><img src="/upload/goods/2016/01-18/569cb70bc8027.jpg" style="float:none;" title="000000000139101869_4_400x400.jpg"/></p><p><img src="/upload/goods/2016/01-18/569cb70c449b0.jpg" style="float:none;" title="000000000139101869_5_400x400.jpg"/></p><p><br/></p>', '/upload/goods/2016/01-18/569cb6fe1e881.jpg', 1, 1, 0, 1495274138, 50, 1, 0, 1, 0, 26, 26, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
 (82, 402, 0, 'TP0000082', '舒肤佳纯白清香型沐浴露720ml', 18, 0, 1000, 3, 500, '147.60', '47.60', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de0cc20ada.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000101811394_1_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de0cc3bb82.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000101811394_2_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de0cc58ae8.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000101811394_4_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de0cc7e359.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000101811394_5_400x400.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-19/569de0c074bdb.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 0, 0, 0, 100, 0, 0, 0, 0, '0.00', '', '', ''),
-(83, 402, 0, 'TP0000083', '力士精油香氛幽莲魅肤沐浴乳1000ml（新老包装随机发货）', 21, 0, 1000, 3, 500, '139.90', '39.90', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de2677105d.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000103783456_1_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de26791718.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000103783456_2_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de267b11bc.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000103783456_4_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de267c9a8f.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000103783456_5_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-19/569de25bdf16a.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
+(83, 402, 0, 'TP0000083', '力士精油香氛幽莲魅肤沐浴乳1000ml（新老包装随机发货）', 21, 0, 1000, 3, 500, '139.90', '39.90', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de2677105d.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000103783456_1_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de26791718.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000103783456_2_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de267b11bc.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000103783456_4_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-19/569de267c9a8f.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000103783456_5_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-19/569de25bdf16a.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0.00', '', '', '');
+INSERT INTO `goods` (`goods_id`, `cat_id`, `extend_cat_id`, `goods_sn`, `goods_name`, `click_count`, `brand_id`, `store_count`, `comment_count`, `weight`, `market_price`, `shop_price`, `cost_price`, `price_ladder`, `keywords`, `goods_remark`, `goods_content`, `original_img`, `is_real`, `is_on_sale`, `is_free_shipping`, `on_time`, `sort`, `is_recommend`, `is_new`, `is_hot`, `last_update`, `goods_type`, `spec_type`, `give_integral`, `exchange_integral`, `suppliers_id`, `sales_sum`, `prom_type`, `prom_id`, `commission`, `spu`, `sku`, `shipping_area_ids`) VALUES
 (84, 336, 0, 'TP0000084', 'YAHAN雅寒2016新款高端气质毛呢大衣外套女中长款修身显瘦欧美OL羊绒大衣多色厂家直营', 19, 0, 1000, 3, 500, '569.00', '469.00', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f354eede7f.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000141400489_1_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f354f1ddf9.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000141400489_2_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f354f446f7.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000141400489_4_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f354f75d5b.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000141400489_5_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-20/569f3545ea2b6.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 24, 24, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
 (85, 336, 0, 'TP0000085', 'VIVIWILL 2015冬季新款长袖翻领加厚毛呢大衣韩版羊毛长款外套 女', 13, 0, 1000, 3, 500, '378.00', '278.00', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f36105a894.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000138337967_1_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f3610797cd.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000138337967_2_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f36109c12c.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000138337967_3_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f3610ba6b3.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000138337967_4_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f3610d3842.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000138337967_5_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-20/569f35fba0eb2.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 24, 24, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
 (86, 336, 0, 'TP0000086', '艾霏娅 2015秋季新款女装 欧美时尚气质大码A字型宽松毛呢大衣外套 女', 15, 0, 1000, 3, 500, '975.00', '875.00', '0.00', NULL, '', '今日起商城搞活动,注册立马送30元代金券,全场满69全国包邮,全场满299送20元优惠券,全场满399送电影票,满999送美国旅游景点门票1张', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f36b9171d4.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000136036474_1_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f36b93f554.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000136036474_2_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f36b964d57.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000136036474_3_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f36b981b29.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000136036474_4_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/01-20/569f36b9aa38b.jpg&quot; style=&quot;float:none;&quot; title=&quot;000000000136036474_5_800x800.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/01-20/569f36ade5aa5.jpg', 1, 1, 0, 0, 50, 1, 0, 1, 0, 24, 24, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
@@ -2018,11 +2012,11 @@ INSERT INTO `goods` (`goods_id`, `cat_id`, `extend_cat_id`, `goods_sn`, `goods_n
 (120, 100, 0, 'TP0000120', '小米旗舰店正品手机平板通用移动电源16000毫安大容量品牌充电宝', 20, 0, 1000, 0, 500, '229.00', '129.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571836da50b4f.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1b.7DGVXXXXaXXXXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571836da76bf2.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2_P.PaVXXXXa0XXXXXXXXXXXX_!!1714128138.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571836da94e84.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB18G4fHXXXXXbAXpXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/571836e30aaba.jpg', 1, 1, 0, 1461204742, 50, 1, 0, 1, 0, 31, 31, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
 (121, 100, 0, 'TP0000121', '科智50000通用充电宝20000毫安冲手机蘋果6s超薄可爱便携移动电源', 19, 0, 1000, 0, 500, '169.90', '69.90', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571837a9bc934.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2Fdg3apXXXXavXXXXXXXXXXXX_!!1134915469.jpg_q30.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571837a9d25db.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2gROGmVXXXXXqXpXXXXXXXXXX_!!1134915469.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571837aa02422.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2MgwTapXXXXXQXpXXXXXXXXXX_!!1134915469.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571837aa26451.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2rTgsfpXXXXbMXXXXXXXXXXXX_!!1134915469.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/571837b30942a.jpg', 1, 1, 0, 1461204949, 50, 1, 0, 1, 0, 31, 31, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
 (122, 100, 0, 'TP0000122', '黛尔尼曼20000M蘋果6s手机通用超薄移动电源冲充电宝MIUI便携毫安', 19, 0, 1000, 0, 500, '169.90', '69.90', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57183855d67a1.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1P36EMpXXXXbEXVXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57183855ef26f.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2_NXkgpXXXXccXXXXXXXXXXXX_!!2452158880.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57183856101d4.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2mXu4gVXXXXakXXXXXXXXXXXX_!!2452158880.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571838561fdc6.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2zSjTkpXXXXcaXpXXXXXXXXXX_!!2452158880.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/5718384936f8a.jpg', 1, 1, 0, 1461205100, 50, 1, 0, 1, 0, 0, 31, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
-(123, 103, 0, 'TP0000123', 'Canon/佳能 EOS 750D单反套机（18-55mm）高清数码相机苏宁易购', 25, 0, 1000, 0, 500, '4097.00', '3997.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b180843d.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1yPeaMXXXXXcyXVXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b1817372.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2D3RlgXXXXXXLXpXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b1824d50.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2haFagXXXXXcmXpXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b184df70.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2QmUZjFXXXXaQXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b186107b.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2rbRwgXXXXXa8XXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/57186b2475e75.jpg', 1, 1, 0, 1461218133, 50, 1, 0, 1, 0, 32, 0, 0, 100, 0, 0, 0, 0, '0.00', '', '', '');
-INSERT INTO `goods` (`goods_id`, `cat_id`, `extend_cat_id`, `goods_sn`, `goods_name`, `click_count`, `brand_id`, `store_count`, `comment_count`, `weight`, `market_price`, `shop_price`, `cost_price`, `price_ladder`, `keywords`, `goods_remark`, `goods_content`, `original_img`, `is_real`, `is_on_sale`, `is_free_shipping`, `on_time`, `sort`, `is_recommend`, `is_new`, `is_hot`, `last_update`, `goods_type`, `spec_type`, `give_integral`, `exchange_integral`, `suppliers_id`, `sales_sum`, `prom_type`, `prom_id`, `commission`, `spu`, `sku`, `shipping_area_ids`) VALUES
+(123, 103, 0, 'TP0000123', 'Canon/佳能 EOS 750D单反套机（18-55mm）高清数码相机苏宁易购', 25, 0, 1000, 0, 500, '4097.00', '3997.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b180843d.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1yPeaMXXXXXcyXVXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b1817372.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2D3RlgXXXXXXLXpXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b1824d50.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2haFagXXXXXcmXpXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b184df70.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2QmUZjFXXXXaQXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57186b186107b.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2rbRwgXXXXXa8XXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/57186b2475e75.jpg', 1, 1, 0, 1461218133, 50, 1, 0, 1, 0, 32, 0, 0, 100, 0, 0, 0, 0, '0.00', '', '', ''),
 (124, 103, 0, 'TP0000124', 'Nikon/尼康D3300入门单反相机 升级版AF-P 18-55镜头套机 分期购', 24, 0, 1000, 0, 500, '2499.00', '2399.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571878fef0f98.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1Vu8wMFXXXXcDXpXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571878ff82511.png&quot; style=&quot;float:none;&quot; title=&quot;TB2_roDkVXXXXacXXXXXXXXXXXX_!!1665463722.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/571878ffd5a2b.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2eJ.elXXXXXa3XpXXXXXXXXXX_!!1665463722.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/5718790011544.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2un_llFXXXXa.XXXXXXXXXXXX_!!1665463722.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187900602d2.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2Z_gslXXXXXcjXXXXXXXXXXXX_!!1665463722.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/5718790894b46.png', 1, 1, 0, 1461221706, 50, 1, 0, 1, 0, 32, 0, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
 (125, 103, 0, 'TP0000125', '【0首付分期】蚂蚁摄影联保单反数码相机Canon/佳能 EOS 760D套机', 20, 0, 1000, 0, 500, '5599.00', '5499.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187b4e36830.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1oShXJFXXXXaLXFXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187b4e57020.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2.ZODmVXXXXbRXpXXXXXXXXXX_!!2124156138.jpg_430x430q90.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187b4eb5f84.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2Cm5AjVXXXXcrXXXXXXXXXXXX_!!2124156138.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187b4f2b526.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2gkidcVXXXXcXXpXXXXXXXXXX_!!2124156138.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187b4f76a95.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2VUd2npXXXXbmXpXXXXXXXXXX_!!2124156138.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/57187b42bfc0c.jpg', 1, 1, 0, 1461222272, 50, 1, 0, 1, 0, 32, 0, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
-(126, 103, 0, 'TP0000126', 'Canon/佳能 EOS 700D套机（18-55mm)数码单反相机 苏宁易购', 22, 0, 1000, 0, 500, '3599.00', '3499.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bcc878f7.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1qLNOMXXXXXcnXVXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bcc9982a.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2edD0epXXXXXvXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bccacb0e.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2Mb2OepXXXXb_XXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bccc3598.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2TcQ4jFXXXXXFXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bccd0d80.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2uMjPepXXXXbTXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/57187bd5c0178.jpg', 1, 1, 0, 1461222401, 50, 1, 0, 1, 0, 32, 0, 0, 0, 0, 0, 1, 12, '0.00', '', '', ''),
+(126, 103, 0, 'TP0000126', 'Canon/佳能 EOS 700D套机（18-55mm)数码单反相机 苏宁易购', 22, 0, 1000, 0, 500, '3599.00', '3499.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bcc878f7.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1qLNOMXXXXXcnXVXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bcc9982a.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2edD0epXXXXXvXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bccacb0e.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2Mb2OepXXXXb_XXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bccc3598.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2TcQ4jFXXXXXFXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187bccd0d80.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2uMjPepXXXXbTXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/57187bd5c0178.jpg', 1, 1, 0, 1461222401, 50, 1, 0, 1, 0, 32, 0, 0, 0, 0, 0, 1, 12, '0.00', '', '', '');
+INSERT INTO `goods` (`goods_id`, `cat_id`, `extend_cat_id`, `goods_sn`, `goods_name`, `click_count`, `brand_id`, `store_count`, `comment_count`, `weight`, `market_price`, `shop_price`, `cost_price`, `price_ladder`, `keywords`, `goods_remark`, `goods_content`, `original_img`, `is_real`, `is_on_sale`, `is_free_shipping`, `on_time`, `sort`, `is_recommend`, `is_new`, `is_hot`, `last_update`, `goods_type`, `spec_type`, `give_integral`, `exchange_integral`, `suppliers_id`, `sales_sum`, `prom_type`, `prom_id`, `commission`, `spu`, `sku`, `shipping_area_ids`) VALUES
 (127, 103, 0, 'TP0000127', 'Canon/佳能 EOS 70D套机(18-135mm)数码相机单反套机 苏宁易购', 21, 0, 1000, 0, 500, '6898.00', '6798.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187c55298a2.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1MnOGMXXXXXbYXpXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187c553878d.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2G52QepXXXXbiXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187c556197e.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2LOstjFXXXXcoXpXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187c557664e.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2wPTLeVXXXXaWXpXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187c5587480.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB29XTYepXXXXXtXXXXXXXXXXXX_!!2616970884.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/57187c5d36631.jpg', 1, 1, 0, 1461222527, 50, 1, 0, 1, 0, 32, 0, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
 (129, 103, 0, 'TP0000129', '【蚂蚁摄影】Canon/佳能 PowerShot SX410 IS 媲单反长焦数码相机', 20, 0, 1000, 0, 500, '1198.00', '1098.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187dc742a01.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1sUNxMXXXXXarXFXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187dc7899af.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2KJa_lVXXXXXdXpXXXXXXXXXX_!!2495829718.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187dc7f2b68.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2L6M4lpXXXXciXXXXXXXXXXXX_!!2495829718.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187dc851a61.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2pNgejpXXXXXcXpXXXXXXXXXX_!!2495829718.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187dc89806a.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2ZfT1npXXXXXsXFXXXXXXXXXX_!!2495829718.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/57187dd92a26f.jpg', 1, 1, 0, 1461222907, 50, 1, 0, 1, 0, 32, 0, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
 (130, 103, 0, 'TP0000130', 'Nikon/尼康 D7200套机(18-140mm) 尼康D7200 单反相机 正品', 21, 0, 1000, 0, 500, '6440.00', '6340.00', '0.00', NULL, '', '', '&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187e5ae60ad.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2rUtYnpXXXXXPXFXXXXXXXXXX_!!1122187574.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187e5b18af5.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2WpoujpXXXXbrXXXXXXXXXXXX_!!1122187574.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187e5be6e9f.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB2yCgLgVXXXXbPXpXXXXXXXXXX_!!1122187574.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187e5c47aec.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB15mkSMpXXXXbSXpXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/goods/2016/04-21/57187e5c83650.jpg&quot; style=&quot;float:none;&quot; title=&quot;TB1oDOsMpXXXXclXVXXXXXXXXXX_!!0-item_pic.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', '/upload/goods/2016/04-21/57187e635d509.jpg', 1, 1, 0, 1461223068, 50, 1, 0, 1, 0, 32, 0, 0, 0, 0, 0, 0, 0, '0.00', '', '', ''),
@@ -2043,7 +2037,7 @@ INSERT INTO `goods` (`goods_id`, `cat_id`, `extend_cat_id`, `goods_sn`, `goods_n
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_activity`
+-- Table structure for table `goods_activity`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_activity` (
@@ -2064,7 +2058,7 @@ CREATE TABLE IF NOT EXISTS `goods_activity` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_attr`
+-- Table structure for table `goods_attr`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_attr` (
@@ -2076,7 +2070,7 @@ CREATE TABLE IF NOT EXISTS `goods_attr` (
 ) ENGINE=InnoDB AUTO_INCREMENT=999 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `goods_attr`
+-- Dumping data for table `goods_attr`
 --
 
 INSERT INTO `goods_attr` (`goods_attr_id`, `goods_id`, `attr_id`, `attr_value`, `attr_price`) VALUES
@@ -2679,7 +2673,7 @@ INSERT INTO `goods_attr` (`goods_attr_id`, `goods_id`, `attr_id`, `attr_value`, 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_attribute`
+-- Table structure for table `goods_attribute`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_attribute` (
@@ -2694,7 +2688,7 @@ CREATE TABLE IF NOT EXISTS `goods_attribute` (
 ) ENGINE=InnoDB AUTO_INCREMENT=329 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `goods_attribute`
+-- Dumping data for table `goods_attribute`
 --
 
 INSERT INTO `goods_attribute` (`attr_id`, `attr_name`, `type_id`, `attr_index`, `attr_type`, `attr_input_type`, `attr_values`, `order`) VALUES
@@ -2881,7 +2875,7 @@ INSERT INTO `goods_attribute` (`attr_id`, `attr_name`, `type_id`, `attr_index`, 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_category`
+-- Table structure for table `goods_category`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_category` (
@@ -2900,7 +2894,7 @@ CREATE TABLE IF NOT EXISTS `goods_category` (
 ) ENGINE=InnoDB AUTO_INCREMENT=844 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `goods_category`
+-- Dumping data for table `goods_category`
 --
 
 INSERT INTO `goods_category` (`id`, `name`, `mobile_name`, `parent_id`, `parent_id_path`, `level`, `sort_order`, `is_show`, `image`, `is_hot`, `cat_group`, `commission_rate`) VALUES
@@ -3752,7 +3746,7 @@ INSERT INTO `goods_category` (`id`, `name`, `mobile_name`, `parent_id`, `parent_
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_collect`
+-- Table structure for table `goods_collect`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_collect` (
@@ -3763,7 +3757,7 @@ CREATE TABLE IF NOT EXISTS `goods_collect` (
 ) ENGINE=InnoDB AUTO_INCREMENT=288 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `goods_collect`
+-- Dumping data for table `goods_collect`
 --
 
 INSERT INTO `goods_collect` (`collect_id`, `user_id`, `goods_id`, `add_time`) VALUES
@@ -3959,7 +3953,7 @@ INSERT INTO `goods_collect` (`collect_id`, `user_id`, `goods_id`, `add_time`) VA
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_consult`
+-- Table structure for table `goods_consult`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_consult` (
@@ -3971,13 +3965,12 @@ CREATE TABLE IF NOT EXISTS `goods_consult` (
   `content` varchar(1024) CHARACTER SET utf8 DEFAULT '' COMMENT '咨询内容',
   `parent_id` int(11) DEFAULT '0' COMMENT '父id 用于管理员回复',
   `is_show` tinyint(1) DEFAULT '0' COMMENT '是否显示'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
-
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_images`
+-- Table structure for table `goods_images`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_images` (
@@ -3987,7 +3980,7 @@ CREATE TABLE IF NOT EXISTS `goods_images` (
 ) ENGINE=InnoDB AUTO_INCREMENT=549 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `goods_images`
+-- Dumping data for table `goods_images`
 --
 
 INSERT INTO `goods_images` (`img_id`, `goods_id`, `image_url`) VALUES
@@ -4463,7 +4456,7 @@ INSERT INTO `goods_images` (`img_id`, `goods_id`, `image_url`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_type`
+-- Table structure for table `goods_type`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_type` (
@@ -4472,7 +4465,7 @@ CREATE TABLE IF NOT EXISTS `goods_type` (
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `goods_type`
+-- Dumping data for table `goods_type`
 --
 
 INSERT INTO `goods_type` (`id`, `name`) VALUES
@@ -4503,7 +4496,7 @@ INSERT INTO `goods_type` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `goods_visit`
+-- Table structure for table `goods_visit`
 --
 
 CREATE TABLE IF NOT EXISTS `goods_visit` (
@@ -4516,7 +4509,7 @@ CREATE TABLE IF NOT EXISTS `goods_visit` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='商品浏览历史表';
 
 --
--- 转存表中的数据 `goods_visit`
+-- Dumping data for table `goods_visit`
 --
 
 INSERT INTO `goods_visit` (`visit_id`, `goods_id`, `user_id`, `visittime`, `cat_id`, `extend_cat_id`) VALUES
@@ -4526,7 +4519,7 @@ INSERT INTO `goods_visit` (`visit_id`, `goods_id`, `user_id`, `visittime`, `cat_
 -- --------------------------------------------------------
 
 --
--- 表的结构 `group_buy`
+-- Table structure for table `group_buy`
 --
 
 CREATE TABLE IF NOT EXISTS `group_buy` (
@@ -4550,7 +4543,7 @@ CREATE TABLE IF NOT EXISTS `group_buy` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='团购商品表';
 
 --
--- 转存表中的数据 `group_buy`
+-- Dumping data for table `group_buy`
 --
 
 INSERT INTO `group_buy` (`id`, `title`, `start_time`, `end_time`, `goods_id`, `price`, `goods_num`, `buy_num`, `order_num`, `virtual_num`, `rebate`, `intro`, `goods_price`, `goods_name`, `recommended`, `views`, `is_end`) VALUES
@@ -4565,7 +4558,7 @@ INSERT INTO `group_buy` (`id`, `title`, `start_time`, `end_time`, `goods_id`, `p
 -- --------------------------------------------------------
 
 --
--- 表的结构 `message`
+-- Table structure for table `message`
 --
 
 CREATE TABLE IF NOT EXISTS `message` (
@@ -4575,13 +4568,12 @@ CREATE TABLE IF NOT EXISTS `message` (
   `type` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '个体消息：0，全体消息1',
   `category` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT ' 系统消息：0，活动消息：1',
   `send_time` int(10) unsigned NOT NULL COMMENT '发送时间'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `navigation`
+-- Table structure for table `navigation`
 --
 
 CREATE TABLE IF NOT EXISTS `navigation` (
@@ -4594,7 +4586,7 @@ CREATE TABLE IF NOT EXISTS `navigation` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `navigation`
+-- Dumping data for table `navigation`
 --
 
 INSERT INTO `navigation` (`id`, `name`, `is_show`, `is_new`, `sort`, `url`) VALUES
@@ -4610,7 +4602,7 @@ INSERT INTO `navigation` (`id`, `name`, `is_show`, `is_new`, `sort`, `url`) VALU
 -- --------------------------------------------------------
 
 --
--- 表的结构 `order`
+-- Table structure for table `order`
 --
 
 CREATE TABLE IF NOT EXISTS `order` (
@@ -4656,11 +4648,12 @@ CREATE TABLE IF NOT EXISTS `order` (
   `parent_sn` varchar(100) DEFAULT NULL COMMENT '父单单号',
   `is_distribut` tinyint(1) DEFAULT '0' COMMENT '是否已分成0未分成1已分成',
   `paid_money` decimal(10,2) DEFAULT '0.00' COMMENT '订金'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 
 --
--- 表的结构 `order_action`
+-- Table structure for table `order_action`
 --
 
 CREATE TABLE IF NOT EXISTS `order_action` (
@@ -4673,13 +4666,12 @@ CREATE TABLE IF NOT EXISTS `order_action` (
   `action_note` varchar(255) NOT NULL DEFAULT '' COMMENT '操作备注',
   `log_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '操作时间',
   `status_desc` varchar(255) DEFAULT NULL COMMENT '状态描述'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `order_goods`
+-- Table structure for table `order_goods`
 --
 
 CREATE TABLE IF NOT EXISTS `order_goods` (
@@ -4703,12 +4695,12 @@ CREATE TABLE IF NOT EXISTS `order_goods` (
   `is_send` tinyint(1) DEFAULT '0' COMMENT '0未发货，1已发货，2已换货，3已退货',
   `delivery_id` int(11) DEFAULT '0' COMMENT '发货单ID',
   `sku` varchar(128) DEFAULT '' COMMENT 'sku'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `payment`
+-- Table structure for table `payment`
 --
 
 CREATE TABLE IF NOT EXISTS `payment` (
@@ -4727,7 +4719,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `pick_up`
+-- Table structure for table `pick_up`
 --
 
 CREATE TABLE IF NOT EXISTS `pick_up` (
@@ -4743,7 +4735,7 @@ CREATE TABLE IF NOT EXISTS `pick_up` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='自提点表';
 
 --
--- 转存表中的数据 `pick_up`
+-- Dumping data for table `pick_up`
 --
 
 INSERT INTO `pick_up` (`pickup_id`, `pickup_name`, `pickup_address`, `pickup_phone`, `pickup_contact`, `province_id`, `city_id`, `district_id`, `suppliersid`) VALUES
@@ -4752,7 +4744,7 @@ INSERT INTO `pick_up` (`pickup_id`, `pickup_name`, `pickup_address`, `pickup_pho
 -- --------------------------------------------------------
 
 --
--- 表的结构 `plugin`
+-- Table structure for table `plugin`
 --
 
 CREATE TABLE IF NOT EXISTS `plugin` (
@@ -4771,7 +4763,7 @@ CREATE TABLE IF NOT EXISTS `plugin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `plugin`
+-- Dumping data for table `plugin`
 --
 
 INSERT INTO `plugin` (`code`, `name`, `version`, `author`, `config`, `config_value`, `desc`, `status`, `type`, `icon`, `bank_code`, `scene`) VALUES
@@ -4791,7 +4783,7 @@ INSERT INTO `plugin` (`code`, `name`, `version`, `author`, `config`, `config_val
 -- --------------------------------------------------------
 
 --
--- 表的结构 `prom_goods`
+-- Table structure for table `prom_goods`
 --
 
 CREATE TABLE IF NOT EXISTS `prom_goods` (
@@ -4806,13 +4798,12 @@ CREATE TABLE IF NOT EXISTS `prom_goods` (
   `group` varchar(255) DEFAULT NULL COMMENT '适用范围',
   `prom_img` varchar(150) DEFAULT NULL COMMENT '活动宣传图片',
   `goods_ids` varchar(255) DEFAULT '' COMMENT '优惠商品id字符串'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `prom_order`
+-- Table structure for table `prom_order`
 --
 
 CREATE TABLE IF NOT EXISTS `prom_order` (
@@ -4829,7 +4820,7 @@ CREATE TABLE IF NOT EXISTS `prom_order` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `prom_order`
+-- Dumping data for table `prom_order`
 --
 
 INSERT INTO `prom_order` (`id`, `name`, `type`, `money`, `expression`, `description`, `start_time`, `end_time`, `is_close`, `group`) VALUES
@@ -4838,7 +4829,7 @@ INSERT INTO `prom_order` (`id`, `name`, `type`, `money`, `expression`, `descript
 -- --------------------------------------------------------
 
 --
--- 表的结构 `recharge`
+-- Table structure for table `recharge`
 --
 
 CREATE TABLE IF NOT EXISTS `recharge` (
@@ -4852,13 +4843,12 @@ CREATE TABLE IF NOT EXISTS `recharge` (
   `pay_code` varchar(20) DEFAULT NULL,
   `pay_name` varchar(80) DEFAULT NULL COMMENT '支付方式',
   `pay_status` tinyint(1) DEFAULT '0' COMMENT '充值状态0:待支付 1:充值成功 2:交易关闭'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `region`
+-- Table structure for table `region`
 --
 
 CREATE TABLE IF NOT EXISTS `region` (
@@ -4869,7 +4859,7 @@ CREATE TABLE IF NOT EXISTS `region` (
 ) ENGINE=InnoDB AUTO_INCREMENT=47498 DEFAULT CHARSET=gbk;
 
 --
--- 转存表中的数据 `region`
+-- Dumping data for table `region`
 --
 
 INSERT INTO `region` (`id`, `name`, `level`, `parent_id`) VALUES
@@ -52394,7 +52384,7 @@ INSERT INTO `region` (`id`, `name`, `level`, `parent_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `region2`
+-- Table structure for table `region2`
 --
 
 CREATE TABLE IF NOT EXISTS `region2` (
@@ -52405,7 +52395,7 @@ CREATE TABLE IF NOT EXISTS `region2` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3524 DEFAULT CHARSET=gbk;
 
 --
--- 转存表中的数据 `region2`
+-- Dumping data for table `region2`
 --
 
 INSERT INTO `region2` (`id`, `name`, `parent_id`, `level`) VALUES
@@ -55937,7 +55927,7 @@ INSERT INTO `region2` (`id`, `name`, `parent_id`, `level`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `remittance`
+-- Table structure for table `remittance`
 --
 
 CREATE TABLE IF NOT EXISTS `remittance` (
@@ -55952,13 +55942,12 @@ CREATE TABLE IF NOT EXISTS `remittance` (
   `remark` varchar(1024) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT '' COMMENT '汇款备注',
   `admin_id` int(11) DEFAULT '0' COMMENT '管理员id',
   `withdrawals_id` int(11) DEFAULT '0' COMMENT '提现申请表id'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `return_goods`
+-- Table structure for table `return_goods`
 --
 
 CREATE TABLE IF NOT EXISTS `return_goods` (
@@ -55975,14 +55964,12 @@ CREATE TABLE IF NOT EXISTS `return_goods` (
   `user_id` int(11) DEFAULT '0' COMMENT '用户id',
   `spec_key` varchar(64) CHARACTER SET utf8 DEFAULT '' COMMENT '商品规格key 对应tp_spec_goods_price 表',
   `seller_delivery` text CHARACTER SET utf8 COMMENT '换货服务，卖家重新发货信息'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
-
-
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `search_word`
+-- Table structure for table `search_word`
 --
 
 CREATE TABLE IF NOT EXISTS `search_word` (
@@ -55992,14 +55979,12 @@ CREATE TABLE IF NOT EXISTS `search_word` (
   `pinyin_simple` varchar(255) NOT NULL DEFAULT '' COMMENT '拼音简写',
   `search_num` int(8) NOT NULL DEFAULT '0' COMMENT '搜索次数',
   `goods_num` int(8) NOT NULL DEFAULT '0' COMMENT '商品数量'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COMMENT='搜索关键词表';
-
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='搜索关键词表';
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `shipping`
+-- Table structure for table `shipping`
 --
 
 CREATE TABLE IF NOT EXISTS `shipping` (
@@ -56012,7 +55997,7 @@ CREATE TABLE IF NOT EXISTS `shipping` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `shipping`
+-- Dumping data for table `shipping`
 --
 
 INSERT INTO `shipping` (`shipping_id`, `shipping_code`, `shipping_name`, `shipping_desc`, `insure`, `enabled`) VALUES
@@ -56027,7 +56012,7 @@ INSERT INTO `shipping` (`shipping_id`, `shipping_code`, `shipping_name`, `shippi
 -- --------------------------------------------------------
 
 --
--- 表的结构 `shipping_area`
+-- Table structure for table `shipping_area`
 --
 
 CREATE TABLE IF NOT EXISTS `shipping_area` (
@@ -56040,7 +56025,7 @@ CREATE TABLE IF NOT EXISTS `shipping_area` (
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `shipping_area`
+-- Dumping data for table `shipping_area`
 --
 
 INSERT INTO `shipping_area` (`shipping_area_id`, `shipping_area_name`, `shipping_code`, `config`, `update_time`, `is_default`) VALUES
@@ -56054,7 +56039,7 @@ INSERT INTO `shipping_area` (`shipping_area_id`, `shipping_area_name`, `shipping
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sms_log`
+-- Table structure for table `sms_log`
 --
 
 CREATE TABLE IF NOT EXISTS `sms_log` (
@@ -56067,14 +56052,12 @@ CREATE TABLE IF NOT EXISTS `sms_log` (
   `msg` varchar(255) DEFAULT NULL COMMENT '短信内容',
   `scene` int(1) DEFAULT '0' COMMENT '发送场景,1:用户注册,2:找回密码,3:客户下单,4:客户支付,5:商家发货,6:身份验证',
   `error_msg` text COMMENT '发送短信异常内容'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sms_template`
+-- Table structure for table `sms_template`
 --
 
 CREATE TABLE IF NOT EXISTS `sms_template` (
@@ -56087,7 +56070,7 @@ CREATE TABLE IF NOT EXISTS `sms_template` (
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `sms_template`
+-- Dumping data for table `sms_template`
 --
 
 INSERT INTO `sms_template` (`tpl_id`, `sms_sign`, `sms_tpl_code`, `tpl_content`, `send_scene`, `add_time`) VALUES
@@ -56097,7 +56080,7 @@ INSERT INTO `sms_template` (`tpl_id`, `sms_sign`, `sms_tpl_code`, `tpl_content`,
 -- --------------------------------------------------------
 
 --
--- 表的结构 `spec`
+-- Table structure for table `spec`
 --
 
 CREATE TABLE IF NOT EXISTS `spec` (
@@ -56109,7 +56092,7 @@ CREATE TABLE IF NOT EXISTS `spec` (
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `spec`
+-- Dumping data for table `spec`
 --
 
 INSERT INTO `spec` (`id`, `type_id`, `name`, `order`, `search_index`) VALUES
@@ -56142,7 +56125,7 @@ INSERT INTO `spec` (`id`, `type_id`, `name`, `order`, `search_index`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `spec_goods_price`
+-- Table structure for table `spec_goods_price`
 --
 
 CREATE TABLE IF NOT EXISTS `spec_goods_price` (
@@ -56156,7 +56139,7 @@ CREATE TABLE IF NOT EXISTS `spec_goods_price` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `spec_goods_price`
+-- Dumping data for table `spec_goods_price`
 --
 
 INSERT INTO `spec_goods_price` (`goods_id`, `key`, `key_name`, `price`, `store_count`, `bar_code`, `sku`) VALUES
@@ -56393,7 +56376,7 @@ INSERT INTO `spec_goods_price` (`goods_id`, `key`, `key_name`, `price`, `store_c
 -- --------------------------------------------------------
 
 --
--- 表的结构 `spec_image`
+-- Table structure for table `spec_image`
 --
 
 CREATE TABLE IF NOT EXISTS `spec_image` (
@@ -56403,7 +56386,7 @@ CREATE TABLE IF NOT EXISTS `spec_image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `spec_image`
+-- Dumping data for table `spec_image`
 --
 
 INSERT INTO `spec_image` (`goods_id`, `spec_image_id`, `src`) VALUES
@@ -56841,7 +56824,7 @@ INSERT INTO `spec_image` (`goods_id`, `spec_image_id`, `src`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `spec_item`
+-- Table structure for table `spec_item`
 --
 
 CREATE TABLE IF NOT EXISTS `spec_item` (
@@ -56851,7 +56834,7 @@ CREATE TABLE IF NOT EXISTS `spec_item` (
 ) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `spec_item`
+-- Dumping data for table `spec_item`
 --
 
 INSERT INTO `spec_item` (`id`, `spec_id`, `item`) VALUES
@@ -56960,7 +56943,7 @@ INSERT INTO `spec_item` (`id`, `spec_id`, `item`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `stock_log`
+-- Table structure for table `stock_log`
 --
 
 CREATE TABLE IF NOT EXISTS `stock_log` (
@@ -56972,14 +56955,12 @@ CREATE TABLE IF NOT EXISTS `stock_log` (
   `muid` int(11) DEFAULT NULL COMMENT '操作用户ID',
   `stock` int(11) DEFAULT NULL COMMENT '更改库存',
   `ctime` int(11) DEFAULT NULL COMMENT '操作时间'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `suppliers`
+-- Table structure for table `suppliers`
 --
 
 CREATE TABLE IF NOT EXISTS `suppliers` (
@@ -56994,7 +56975,7 @@ CREATE TABLE IF NOT EXISTS `suppliers` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `system_menu`
+-- Table structure for table `system_menu`
 --
 
 CREATE TABLE IF NOT EXISTS `system_menu` (
@@ -57006,7 +56987,7 @@ CREATE TABLE IF NOT EXISTS `system_menu` (
 ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `system_menu`
+-- Dumping data for table `system_menu`
 --
 
 INSERT INTO `system_menu` (`id`, `name`, `group`, `right`, `is_del`) VALUES
@@ -57067,7 +57048,7 @@ INSERT INTO `system_menu` (`id`, `name`, `group`, `right`, `is_del`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `system_module`
+-- Table structure for table `system_module`
 --
 
 CREATE TABLE IF NOT EXISTS `system_module` (
@@ -57084,7 +57065,7 @@ CREATE TABLE IF NOT EXISTS `system_module` (
 ) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `system_module`
+-- Dumping data for table `system_module`
 --
 
 INSERT INTO `system_module` (`mod_id`, `module`, `level`, `ctl`, `act`, `title`, `visible`, `parent_id`, `orderby`, `icon`) VALUES
@@ -57245,7 +57226,7 @@ INSERT INTO `system_module` (`mod_id`, `module`, `level`, `ctl`, `act`, `title`,
 -- --------------------------------------------------------
 
 --
--- 表的结构 `topic`
+-- Table structure for table `topic`
 --
 
 CREATE TABLE IF NOT EXISTS `topic` (
@@ -57259,11 +57240,12 @@ CREATE TABLE IF NOT EXISTS `topic` (
   `topic_state` tinyint(1) DEFAULT '1' COMMENT '专题状态1-草稿、2-已发布',
   `topic_margin_top` tinyint(3) DEFAULT '0' COMMENT '正文距顶部距离',
   `ctime` int(11) DEFAULT NULL COMMENT '专题创建时间'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 
 --
--- 表的结构 `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -57303,11 +57285,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `second_leader` int(11) DEFAULT '0' COMMENT '第二个上级',
   `third_leader` int(11) DEFAULT '0' COMMENT '第三个上级',
   `token` varchar(64) DEFAULT '' COMMENT '用于app 授权类似于session_id'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 
 --
--- 表的结构 `user_address`
+-- Table structure for table `user_address`
 --
 
 CREATE TABLE IF NOT EXISTS `user_address` (
@@ -57325,13 +57308,12 @@ CREATE TABLE IF NOT EXISTS `user_address` (
   `mobile` varchar(60) NOT NULL DEFAULT '' COMMENT '手机',
   `is_default` tinyint(1) DEFAULT '0' COMMENT '默认收货地址',
   `is_pickup` tinyint(1) DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_collection`
+-- Table structure for table `user_collection`
 --
 
 CREATE TABLE IF NOT EXISTS `user_collection` (
@@ -57345,7 +57327,7 @@ CREATE TABLE IF NOT EXISTS `user_collection` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_distribution`
+-- Table structure for table `user_distribution`
 --
 
 CREATE TABLE IF NOT EXISTS `user_distribution` (
@@ -57364,7 +57346,7 @@ CREATE TABLE IF NOT EXISTS `user_distribution` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_level`
+-- Table structure for table `user_level`
 --
 
 CREATE TABLE IF NOT EXISTS `user_level` (
@@ -57376,7 +57358,7 @@ CREATE TABLE IF NOT EXISTS `user_level` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `user_level`
+-- Dumping data for table `user_level`
 --
 
 INSERT INTO `user_level` (`level_id`, `level_name`, `amount`, `discount`, `describe`) VALUES
@@ -57390,7 +57372,7 @@ INSERT INTO `user_level` (`level_id`, `level_name`, `amount`, `discount`, `descr
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_message`
+-- Table structure for table `user_message`
 --
 
 CREATE TABLE IF NOT EXISTS `user_message` (
@@ -57402,7 +57384,7 @@ CREATE TABLE IF NOT EXISTS `user_message` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `user_message`
+-- Dumping data for table `user_message`
 --
 
 INSERT INTO `user_message` (`rec_id`, `user_id`, `message_id`, `category`, `status`) VALUES
@@ -57412,7 +57394,7 @@ INSERT INTO `user_message` (`rec_id`, `user_id`, `message_id`, `category`, `stat
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_store`
+-- Table structure for table `user_store`
 --
 
 CREATE TABLE IF NOT EXISTS `user_store` (
@@ -57429,7 +57411,7 @@ CREATE TABLE IF NOT EXISTS `user_store` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `virtual_shop`
+-- Table structure for table `virtual_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `virtual_shop` (
@@ -57444,7 +57426,7 @@ CREATE TABLE IF NOT EXISTS `virtual_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='分销商虚拟店铺表';
 
 --
--- 转存表中的数据 `virtual_shop`
+-- Dumping data for table `virtual_shop`
 --
 
 INSERT INTO `virtual_shop` (`user_id`, `shop_name`, `shop_level`, `shop_intro`, `shop_logo`, `shop_phone`, `shop_qq`, `shop_theme`) VALUES
@@ -57453,7 +57435,7 @@ INSERT INTO `virtual_shop` (`user_id`, `shop_name`, `shop_level`, `shop_intro`, 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `withdrawals`
+-- Table structure for table `withdrawals`
 --
 
 CREATE TABLE IF NOT EXISTS `withdrawals` (
@@ -57466,13 +57448,12 @@ CREATE TABLE IF NOT EXISTS `withdrawals` (
   `account_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT '' COMMENT '银行账户名 可以是支付宝可以其他银行',
   `remark` varchar(1024) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT '' COMMENT '提现备注',
   `status` tinyint(1) DEFAULT '0' COMMENT '提现状态0申请中1申请成功2申请失败'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `wx_img`
+-- Table structure for table `wx_img`
 --
 
 CREATE TABLE IF NOT EXISTS `wx_img` (
@@ -57487,13 +57468,12 @@ CREATE TABLE IF NOT EXISTS `wx_img` (
   `title` varchar(60) NOT NULL DEFAULT '' COMMENT '标题',
   `goods_id` int(11) NOT NULL DEFAULT '0' COMMENT '商品id',
   `goods_name` varchar(50) DEFAULT NULL COMMENT '商品名称'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COMMENT='微信图文';
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微信图文';
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `wx_keyword`
+-- Table structure for table `wx_keyword`
 --
 
 CREATE TABLE IF NOT EXISTS `wx_keyword` (
@@ -57502,13 +57482,12 @@ CREATE TABLE IF NOT EXISTS `wx_keyword` (
   `pid` int(11) NOT NULL COMMENT '对应表ID',
   `token` varchar(60) NOT NULL DEFAULT '' COMMENT 'token',
   `type` varchar(30) DEFAULT 'TEXT' COMMENT '关键词操作类型'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `wx_menu`
+-- Table structure for table `wx_menu`
 --
 
 CREATE TABLE IF NOT EXISTS `wx_menu` (
@@ -57523,7 +57502,7 @@ CREATE TABLE IF NOT EXISTS `wx_menu` (
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `wx_menu`
+-- Dumping data for table `wx_menu`
 --
 
 INSERT INTO `wx_menu` (`id`, `level`, `name`, `sort`, `type`, `value`, `token`, `pid`) VALUES
@@ -57534,7 +57513,7 @@ INSERT INTO `wx_menu` (`id`, `level`, `name`, `sort`, `type`, `value`, `token`, 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `wx_msg`
+-- Table structure for table `wx_msg`
 --
 
 CREATE TABLE IF NOT EXISTS `wx_msg` (
@@ -57551,7 +57530,7 @@ CREATE TABLE IF NOT EXISTS `wx_msg` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `wx_news`
+-- Table structure for table `wx_news`
 --
 
 CREATE TABLE IF NOT EXISTS `wx_news` (
@@ -57566,7 +57545,7 @@ CREATE TABLE IF NOT EXISTS `wx_news` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `wx_text`
+-- Table structure for table `wx_text`
 --
 
 CREATE TABLE IF NOT EXISTS `wx_text` (
@@ -57580,13 +57559,12 @@ CREATE TABLE IF NOT EXISTS `wx_text` (
   `updatetime` varchar(13) NOT NULL DEFAULT '' COMMENT '更新时间',
   `click` int(11) NOT NULL COMMENT '点击',
   `token` char(30) NOT NULL COMMENT 'token'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COMMENT='文本回复表';
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文本回复表';
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `wx_user`
+-- Table structure for table `wx_user`
 --
 
 CREATE TABLE IF NOT EXISTS `wx_user` (
@@ -57617,9 +57595,7 @@ CREATE TABLE IF NOT EXISTS `wx_user` (
   `qr` varchar(200) NOT NULL DEFAULT '' COMMENT 'qr',
   `menu_config` text COMMENT '菜单',
   `wait_access` tinyint(1) DEFAULT '0' COMMENT '微信接入状态,0待接入1已接入'
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COMMENT='微信公共帐号';
-
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微信公共帐号';
 
 --
 -- Indexes for dumped tables
@@ -57828,6 +57804,7 @@ ALTER TABLE `goods_collect`
 --
 ALTER TABLE `goods_consult`
   ADD PRIMARY KEY (`id`);
+
 
 --
 -- Indexes for table `goods_images`
@@ -58140,7 +58117,7 @@ ALTER TABLE `wx_user`
 -- AUTO_INCREMENT for table `account_log`
 --
 ALTER TABLE `account_log`
-  MODIFY `log_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '日志id',AUTO_INCREMENT=362;
+  MODIFY `log_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '日志id';
 --
 -- AUTO_INCREMENT for table `ad`
 --
@@ -58155,7 +58132,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `admin_log`
 --
 ALTER TABLE `admin_log`
-  MODIFY `log_id` bigint(16) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=946;
+  MODIFY `log_id` bigint(16) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `admin_role`
 --
@@ -58190,12 +58167,12 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '购物车表',AUTO_INCREMENT=4028;
+  MODIFY `id` int(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '购物车表';
 --
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `comment_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '评论id',AUTO_INCREMENT=12238;
+  MODIFY `comment_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '评论id';
 --
 -- AUTO_INCREMENT for table `config`
 --
@@ -58205,17 +58182,17 @@ ALTER TABLE `config`
 -- AUTO_INCREMENT for table `coupon`
 --
 ALTER TABLE `coupon`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=16;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `coupon_list`
 --
 ALTER TABLE `coupon_list`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=185;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `delivery_doc`
 --
 ALTER TABLE `delivery_doc`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '发货单ID',AUTO_INCREMENT=45;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '发货单ID';
 --
 -- AUTO_INCREMENT for table `expense_log`
 --
@@ -58225,17 +58202,17 @@ ALTER TABLE `expense_log`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `msg_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '默认自增ID',AUTO_INCREMENT=34;
+  MODIFY `msg_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '默认自增ID';
 --
 -- AUTO_INCREMENT for table `flash_sale`
 --
 ALTER TABLE `flash_sale`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `friend_link`
 --
 ALTER TABLE `friend_link`
-  MODIFY `link_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=9;
+  MODIFY `link_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `goods`
 --
@@ -58270,7 +58247,7 @@ ALTER TABLE `goods_collect`
 -- AUTO_INCREMENT for table `goods_consult`
 --
 ALTER TABLE `goods_consult`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品咨询id',AUTO_INCREMENT=3048;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品咨询id';
 --
 -- AUTO_INCREMENT for table `goods_images`
 --
@@ -58295,7 +58272,7 @@ ALTER TABLE `group_buy`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `navigation`
 --
@@ -58305,17 +58282,17 @@ ALTER TABLE `navigation`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `order_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '订单id',AUTO_INCREMENT=1500;
+  MODIFY `order_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '订单id';
 --
 -- AUTO_INCREMENT for table `order_action`
 --
 ALTER TABLE `order_action`
-  MODIFY `action_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=1948;
+  MODIFY `action_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `order_goods`
 --
 ALTER TABLE `order_goods`
-  MODIFY `rec_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id自增',AUTO_INCREMENT=1761;
+  MODIFY `rec_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id自增';
 --
 -- AUTO_INCREMENT for table `payment`
 --
@@ -58330,7 +58307,7 @@ ALTER TABLE `pick_up`
 -- AUTO_INCREMENT for table `prom_goods`
 --
 ALTER TABLE `prom_goods`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '活动ID',AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '活动ID';
 --
 -- AUTO_INCREMENT for table `prom_order`
 --
@@ -58340,7 +58317,7 @@ ALTER TABLE `prom_order`
 -- AUTO_INCREMENT for table `recharge`
 --
 ALTER TABLE `recharge`
-  MODIFY `order_id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=127;
+  MODIFY `order_id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `region`
 --
@@ -58355,17 +58332,17 @@ ALTER TABLE `region2`
 -- AUTO_INCREMENT for table `remittance`
 --
 ALTER TABLE `remittance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '分销用户转账记录表',AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '分销用户转账记录表';
 --
 -- AUTO_INCREMENT for table `return_goods`
 --
 ALTER TABLE `return_goods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '退货申请表id自增',AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '退货申请表id自增';
 --
 -- AUTO_INCREMENT for table `search_word`
 --
 ALTER TABLE `search_word`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '搜索表ID',AUTO_INCREMENT=10;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '搜索表ID';
 --
 -- AUTO_INCREMENT for table `shipping`
 --
@@ -58380,7 +58357,7 @@ ALTER TABLE `shipping_area`
 -- AUTO_INCREMENT for table `sms_log`
 --
 ALTER TABLE `sms_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `sms_template`
 --
@@ -58400,7 +58377,7 @@ ALTER TABLE `spec_item`
 -- AUTO_INCREMENT for table `stock_log`
 --
 ALTER TABLE `stock_log`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `suppliers`
 --
@@ -58420,17 +58397,17 @@ ALTER TABLE `system_module`
 -- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `topic_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=2;
+  MODIFY `topic_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=2592;
+  MODIFY `user_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `user_address`
 --
 ALTER TABLE `user_address`
-  MODIFY `address_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=825;
+  MODIFY `address_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `user_collection`
 --
@@ -58460,17 +58437,17 @@ ALTER TABLE `user_store`
 -- AUTO_INCREMENT for table `withdrawals`
 --
 ALTER TABLE `withdrawals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '提现申请表',AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '提现申请表';
 --
 -- AUTO_INCREMENT for table `wx_img`
 --
 ALTER TABLE `wx_img`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `wx_keyword`
 --
 ALTER TABLE `wx_keyword`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=330;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `wx_menu`
 --
@@ -58490,12 +58467,12 @@ ALTER TABLE `wx_news`
 -- AUTO_INCREMENT for table `wx_text`
 --
 ALTER TABLE `wx_text`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id';
 --
 -- AUTO_INCREMENT for table `wx_user`
 --
 ALTER TABLE `wx_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id',AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '表id';
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

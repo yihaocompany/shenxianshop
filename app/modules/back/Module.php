@@ -5,6 +5,7 @@ use Phalcon\Loader;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Php as PhpEngine;
 use Phalcon\Mvc\ModuleDefinitionInterface;
+use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 class Module implements ModuleDefinitionInterface
 {
     /**
@@ -38,10 +39,23 @@ class Module implements ModuleDefinitionInterface
             $view->setDI($this);
             $view->setViewsDir(__DIR__ . '/views/');
 
-            $view->registerEngines([
+       /*     $view->registerEngines([
                 '.volt'  => 'voltShared',
                 '.phtml' => PhpEngine::class
+            ]);*/
+
+
+            $view->registerEngines([
+                '.volt' => function ($view) {
+                    $volt = new VoltEngine($view, $this);
+                    $volt->setOptions([
+                        'compiledPath' => __DIR__ . '/views/volt/',
+                        'compiledSeparator' => '_'
+                    ]);
+                    return $volt;
+                }
             ]);
+
             return $view;
         });
     }

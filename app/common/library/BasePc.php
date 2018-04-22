@@ -23,6 +23,9 @@ class BasePc extends  \Shenxianshop\Base{
         foreach ($configlist->configlist() as $item){
             $conArray[$item['name']."_".$item['inc_type']]=$item['value'];
         }
+       /* echo "<pre>";
+        var_dump($conArray);
+        echo "</pre>";*/
         $this->view->setVar('_configure',$conArray);
 
     }

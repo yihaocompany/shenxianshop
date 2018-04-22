@@ -35,6 +35,9 @@ $messages = [
     'lang_record_no' =>'备案号:{xxxxxxxx}号',
     'lang_home' =>'首页',
     'lang_shop_info_store_title'=>'shop title',
-    'lang_net_fail'=>'网络失败，请刷新页面后重试!'
+    'lang_net_fail'=>'网络失败，请刷新页面后重试!',
+    'lang_page_jump'=>'页面自动跳转中',
+    'lang_wait_time'=>'等待时间...',
+    'lang_oper_title'=>'操作提示'
 
 ];

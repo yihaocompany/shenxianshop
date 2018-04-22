@@ -21,6 +21,7 @@ class Module implements ModuleDefinitionInterface
         $loader->registerNamespaces([
             'Shenxianshop\Modules\Api\Controllers' => __DIR__ . '/controllers/',
             'Shenxianshop\Modules\Api\Models' => __DIR__ . '/models/',
+            'Shenxianshop\Forms'                    => APP_PATH . '/common/forms/',
         ]);
 
         $loader->register();

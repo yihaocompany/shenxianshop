@@ -99,7 +99,55 @@ $di->setShared('db', function () use ($di){
 });
 
 ```
+* 添加nginx配置，demo:
+```bash
+server {
+  listen 80;
+  server_name sx.com www.sx.com;
+  access_log /data/wwwlogs/sx.com_nginx.log combined;
+  index index.html index.htm index.php;
+  set $root_path   /web/shenxianshop/public;
+  root $root_path;
+  #try_files $uri $uri/ @rewrite;
+       location / {
+        if ($request_uri ~ (.+?\.php)(|/.+)$ ) {
+            break;
+        }
+        if (!-e $request_filename) {
+            rewrite ^/(.*)$ /index.php?_url=/$1;
+        }
+    }
 
+
+ location ~ \.php {
+        fastcgi_pass unix:/dev/shm/php-cgi.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        set $real_script_name $fastcgi_script_name;
+        if ($fastcgi_script_name ~ "^(.+?\.php)(/.+)$") {
+            set $real_script_name $1;
+            set $path_info $2;
+        }
+        fastcgi_param SCRIPT_FILENAME $document_root$real_script_name;
+        fastcgi_param SCRIPT_NAME $real_script_name;
+        fastcgi_param PATH_INFO $path_info;
+    }
+
+  location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|flv|mp4|ico)$ {
+    root $root_path;
+    expires 30d;
+    access_log off;
+  }
+  location ~ .*\.(js|css)?$ {
+    root $root_path;
+    expires 7d;
+    access_log off;
+  }
+  location ~ /\.ht {
+    deny all;
+  }
+}
+```
 
 
 

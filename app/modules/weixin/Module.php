@@ -19,6 +19,7 @@ class Module implements ModuleDefinitionInterface
         $loader->registerNamespaces([
             'Shenxianshop\Modules\Weixin\Controllers' => __DIR__ . '/controllers/',
             'Shenxianshop\Modules\Weixin\Models'      => __DIR__ . '/models/',
+            'Shenxianshop\Forms'                      => APP_PATH . '/common/forms/',
         ]);
         $loader->register();
     }

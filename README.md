@@ -36,6 +36,8 @@ git push -u origin master
 git status
 
 ## 代码说明
+#### 工具说明
+在tools下存放了phalcon-devtools 跟 phpstorm下提知能提示插件 phpstorm-library-plugin.jar
 #### REDIS的做缓存
 
 
@@ -98,7 +100,38 @@ $di->setShared('db', function () use ($di){
     return $connection;
 });
 
+调用：
+
+
+
+
 ```
+
+
+
+```
+//获取所有的prifler记录结果，这是一个数组，每条记录对应一个sql语句
+$profiles= $this->di->get('profiler')->getProfiles();
+//遍历输出
+foreach($profilesas  $profile) {
+   echo
+"SQL语句: ", $profile->getSQLStatement(), "\n";
+   echo
+"开始时间: ", $profile->getInitialTime(), "\n";
+   echo
+"结束时间: ", $profile->getFinalTime(), "\n";
+   echo
+"消耗时间: ", $profile->getTotalElapsedSeconds(), "\n";
+}
+
+//直接获取最后一条sql语句
+echo $this->di->get('profiler')->getLastProfile()->getSQLStatement();
+
+```
+
+
+
+
 * 添加nginx配置，demo:
 ```bash
 server {

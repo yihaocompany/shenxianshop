@@ -245,7 +245,7 @@
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                {{ link_to('#', '帐户' ,'class':"btn btn-default btn-flat") }}
+                                {{ link_to('/back/adminusers/profile', '帐户' ,'class':"btn btn-default btn-flat") }}
                             </div>
                             <div class="pull-right">
                                 {{ link_to('/back/admin/signout', '退出' ,'class':"btn btn-default btn-flat") }}

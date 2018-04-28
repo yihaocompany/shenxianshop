@@ -245,10 +245,10 @@
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <?= $this->tag->linkTo(['#', 'Profile', 'class' => 'btn btn-default btn-flat']) ?>
+                                <?= $this->tag->linkTo(['/back/adminusers/profile', '帐户', 'class' => 'btn btn-default btn-flat']) ?>
                             </div>
                             <div class="pull-right">
-                                <?= $this->tag->linkTo(['/back/admin/signout', 'Sign out', 'class' => 'btn btn-default btn-flat']) ?>
+                                <?= $this->tag->linkTo(['/back/admin/signout', '退出', 'class' => 'btn btn-default btn-flat']) ?>
                             </div>
                         </li>
                     </ul>

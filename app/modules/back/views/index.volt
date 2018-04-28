@@ -15,13 +15,11 @@
         {{ stylesheet_link('/back/bower_components/font-awesome/css/font-awesome.min.css') }}
         <!-- Ionicons -->
         {{ stylesheet_link('/back/bower_components/Ionicons/css/ionicons.min.css') }}
-
         <!-- Theme style -->
         {{ stylesheet_link('/back/dist/css/AdminLTE.min.css') }}
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         {{ stylesheet_link('/back/dist/css/skins/_all-skins.min.css') }}
-
         <!-- Morris chart -->
         {{ stylesheet_link("/back/bower_components/morris.js/morris.css") }}
         <!-- jvectormap -->

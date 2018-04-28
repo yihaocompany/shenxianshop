@@ -7,15 +7,19 @@ use Shenxianshop\Models\Admin;
 class AdminController extends ControllerBase
 {
     public function indexAction(){
-      $url="/back/admin/login";
        try{
-           $url= $this->cookies->get('url');
+            $url= $this->cookies->get('url');
+            if($url==''  or $url=null or empty($url) ){
+                $url="/back/admin/login";
+            }
             $this->view->setVar('url',  $url);
         }catch (\Exception $e){
            $this -> write_exception_log($e);
+           if($url==''  or $url==null or empty($url) ){
+               $url="/back/admin/login";
+           }
            $this->view->setVar('url',  $url);
        }
-
         $this->view->disableLevel(View::LEVEL_MAIN_LAYOUT);
     }
     public function loginAction(){
@@ -54,6 +58,13 @@ class AdminController extends ControllerBase
                 "bind" => $bindparameters
             );
             if ($admin->UserCheck($parameters, $password)) {
+              //  $checkbox = $this->request->getPost('checkbox');
+             /*   if($checkbox){
+                    //保存到cookies
+                    $this->cookies->set('admin',$username);
+                    $this->cookies->set('password',$password);
+                }*/
+
                 exit($this->ajax_return($this->messages['lang_success'], 1, array('url' => '/back/index/index')));
             } else {
                 exit($this->ajax_return($this->messages['lang_login'], -1));

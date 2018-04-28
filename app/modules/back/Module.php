@@ -39,11 +39,6 @@ class Module implements ModuleDefinitionInterface
             $view->setDI($this);
             $view->setViewsDir(__DIR__ . '/views/');
 
-       /*     $view->registerEngines([
-                '.volt'  => 'voltShared',
-                '.phtml' => PhpEngine::class
-            ]);*/
-
 
             $view->registerEngines([
                 '.volt' => function ($view) {
@@ -55,7 +50,6 @@ class Module implements ModuleDefinitionInterface
                     return $volt;
                 }
             ]);
-
             return $view;
         });
     }

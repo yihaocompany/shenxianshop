@@ -53,7 +53,7 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox"><?php echo $_language['lang_saveinfo'] ?>
+                            <input type="checkbox" id="mycheckbox" name="mycheckbox"><?php echo $_language['lang_saveinfo'] ?>
                         </label>
                     </div>
                 </div>
@@ -70,7 +70,8 @@
 <!-- /.login-box -->
 </body>
 <!-- jQuery 3 -->
-{{ javascript_include('/back/bower_components/jquery/dist/jquery.min.js') }}
+{{ javascript_include('/js/jquery.min.js') }}
+{{ javascript_include('/js/jquery.cookie.js') }}
 <!-- Bootstrap 3.3.7 -->
 {{ javascript_include('/back/bower_components/bootstrap/dist/js/bootstrap.min.js') }}
 <!-- iCheck -->
@@ -78,35 +79,54 @@
 {{ javascript_include('/assets/sweetalert/sweetalert.min.js') }}
 <script>
     $(function () {
-        $('input').iCheck({
+
+       $('input').iCheck({
             checkboxClass: 'icheckbox_square-blue',
             radioClass: 'iradio_square-blue',
-            increaseArea: '20%' /* optional */
+            increaseArea: '20%'
         });
-        $("#verify").bind('click',function () {
-            refreshcode();
-        });
-
+        if(  document.cookie){
+            let strCookie=document.cookie;
+            let arrCookie=strCookie.split("; ");
+            let admin;
+            let password;
+            for(let i=0;i<arrCookie.length;i++){
+                let arr=arrCookie[i].split("=");
+                if("admin"==arr[0]){
+                    admin=arr[1];
+                }
+                if("password"==arr[0]){
+                    password=arr[1];
+                }
+            }
+            if(admin && password){
+                $("#username").val(admin);
+                $("#password").val(password);
+                $("#mycheckbox").attr("checked",true);
+            }
+        }
         $("#submit").bind('click',function () {
-            var vertify=true;
             if($("#username").val()==""){
                 warn('{{ _language['lang_needusername'] }}');
-
-                vertify=false;
                 refreshcode();
                 return;
             }
             if($("#password").val()=="") {
                 warn('{{ _language['lang_needpassword'] }}');
-                vertify=false;
                 refreshcode();
                 return;
             }
             if($("#code").val()=="") {
                 warn(' {{ _language['lang_needcode'] }}');
-                vertify=false;
                 refreshcode();
                 return;
+            }
+            if($('#checkbox').is(':checked')){
+                document.cookie="admin="+$("#username").val();
+                document.cookie="password="+$("#password").val();
+            }else{
+                document.cookie="admin=";
+                document.cookie="password=";
             }
             $.ajax({
                 async:false,
@@ -119,7 +139,6 @@
                         refreshcode();
                         warn(res.message);
                     }else{
-                        refreshcode();
                         warn(res.message);
                         location.href = res.data.url;
                     }

@@ -6,14 +6,14 @@
 </head>
 <style>
     *{margin: 0 auto;padding: 0;}
-    .tranjump{background: url('/images/tac.jpg') no-repeat;width: 100%;height: 100%;}
+    .tranjump{background: url('/back/img/tac.jpg') no-repeat;width: 100%;height: 100%;}
     .rectangle_box{position: absolute;left: 50%;right: 50%;top: 50%;bottom: 50%;margin-left: -189.5px;margin-top: -77px;}
     .borderopely{width: 363px;height: 138px;border: 8px solid rgba(255,255,255,0.6);}
     .tipbox{width: 363px;height: 138px;background: white;text-align: center;}
     .welcople{color: #666666;font-size: 16px;padding-top: 18px;}
-    .welcople .litps{background: url('/images/socp.png') no-repeat;width: 31px;height: 31px;display: inline-block;vertical-align: text-bottom;}
-    .welcople .modifysu{background: url('/images/socp2.png') no-repeat;width: 34px;height: 37px;}
-    .welcople .modifyfail{background: url('/images/socp3.png') no-repeat;width: 24px;height: 28px;}
+    .welcople .litps{background: url('/back/img/socp.png') no-repeat;width: 31px;height: 31px;display: inline-block;vertical-align: text-bottom;}
+    .welcople .modifysu{background: url('/back/img/socp2.png') no-repeat;width: 34px;height: 37px;}
+    .welcople .modifyfail{background: url('/back/img/socp3.png') no-repeat;width: 24px;height: 28px;}
     .ma-to-30{margin-top: 30px;}
     .ma-to-20{margin-top: 20px;}
     .ma-to-10{margin-top: 10px;}
@@ -36,7 +36,7 @@
                 <i class="litps modifyfail"></i>{{ _language['lang_login'] }}</div>
             <div class="ma-to-20">
                 <span class="cloblu">{{ _language['lang_page_jump'] }}</span>
-                <span class="waittim"><a id="href" href="{{ url}}" style="color: #666666">{{ _language['lang_wait_time'] }}<em id="wait">3</em></a></span>
+                <span class="waittim"><a id="href" href="{{ url }}" style="color: #666666">{{ _language['lang_wait_time'] }}<em id="wait">3</em></a></span>
             </div>
         </div>
         <!--修改失败-e-->
